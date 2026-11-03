@@ -111,37 +111,61 @@ function renderChapter(r){
   else renderScen(c,body);
 }
 
+const IMGDIR=window.IMGDIR||'i/';
+const inl=t=>esc(t).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+function md(src){
+  const L=String(src||'').replace(/\r/g,'').split('\n');const out=[];let i=0;
+  while(i<L.length){
+    let l=L[i];
+    if(/^```/.test(l)){const buf=[];i++;while(i<L.length&&!/^```/.test(L[i]))buf.push(L[i++]);i++;out.push(h('pre',null,h('code',null,buf.join('\n'))));continue}
+    if(/^\s*\|.*\|\s*$/.test(l)&&i+1<L.length&&/^\s*\|[\s:|-]+\|\s*$/.test(L[i+1])){
+      const row=x=>x.trim().replace(/^\||\|$/g,'').split('|').map(z=>z.trim());
+      const head=row(l);i+=2;const rows=[];
+      while(i<L.length&&/^\s*\|.*\|\s*$/.test(L[i]))rows.push(row(L[i++]));
+      out.push(h('div',{class:'tw'},h('table',{class:'t'},h('thead',null,h('tr',null,head.map(x=>h('th',{html:inl(x)})))),h('tbody',null,rows.map(r=>h('tr',null,r.map(x=>h('td',{html:inl(x)}))))))));continue}
+    if(/^###\s+/.test(l)){out.push(h('h4',{html:inl(l.replace(/^###\s+/,''))}));i++;continue}
+    if(/^\s*[-*]\s+/.test(l)){const ul=h('ul');while(i<L.length&&/^\s*[-*]\s+/.test(L[i])){ul.append(h('li',{html:inl(L[i].replace(/^\s*[-*]\s+/,''))}));i++}out.push(ul);continue}
+    if(!l.trim()){i++;continue}
+    const buf=[l];i++;while(i<L.length&&L[i].trim()&&!/^(```|###\s|\s*[-*]\s|\s*\|)/.test(L[i]))buf.push(L[i++]);
+    out.push(h('p',{html:inl(buf.join(' '))}));
+  }
+  return out;
+}
 function slideEl(c,s){
-  const showImg=()=>mem.imgmode==='all'||(mem.imgmode==='auto'&&s.img);
-  const card=h('article',{class:'slide'+(s.div?' div':''),id:'s-'+s.n});
-  card.append(h('header',null,h('span',{class:'sn'},'#'+s.n),h('h3',null,s.t||'(สไลด์ภาพ)')));
-  const blocks=s.b;
-  if(blocks.length){
-    const sb=h('div',{class:'sb'});
-    let ul=null;
-    blocks.forEach((b,i)=>{
-      if(b[0]==='li'){if(!ul){ul=h('ul');sb.append(ul)}ul.append(h('li',null,b[1]));return}
-      ul=null;
-      if(b[0]==='chips'){sb.append(h('div',{class:'chips'},b[1].map(x=>h('span',null,x))));return}
-      if(b[0]==='pre'){sb.append(h('pre',null,h('code',null,b[1])));return}
-      const nx=blocks[i+1];
-      if(nx&&nx[0]==='li'&&b[1].split(' ').length<=7&&!/[.:?]$/.test(b[1]))sb.append(h('h4',null,b[1]));
-      else sb.append(h('p',null,b[1]));
-    });
+  const E=(window.EXPL&&window.EXPL[c.id]&&window.EXPL[c.id][s.n])||null;
+  const skip=E?E.skip:s.div;
+  const wantImg=E?!!E.img:!!s.img;
+  const showImg=()=>mem.imgmode==='all'||(mem.imgmode==='auto'&&wantImg&&!skip);
+  const card=h('article',{class:'slide'+(skip?' div':''),id:'s-'+s.n});
+  card.append(h('header',null,h('span',{class:'sn'},'#'+s.n),h('h3',null,(E&&E.title)||s.t||'(สไลด์ภาพ)')));
+  if(E&&!skip&&E.body)card.append(h('div',{class:'sb ex'},md(E.body)));
+  else if(!E&&s.b.length){
+    const sb=h('div',{class:'sb'});let ul=null;
+    s.b.forEach(b=>{if(b[0]==='li'){if(!ul){ul=h('ul');sb.append(ul)}ul.append(h('li',null,b[1]));return}ul=null;
+      if(b[0]==='chips')sb.append(h('div',{class:'chips'},b[1].map(x=>h('span',null,x))));
+      else if(b[0]==='pre')sb.append(h('pre',null,h('code',null,b[1])));else sb.append(h('p',null,b[1]));});
     card.append(sb);
   }
   const wrap=h('div',{class:'imgwrap'});
   const btn=h('button',{class:'imgtoggle',type:'button'});
-  card.append(wrap,btn);
+  if(!skip||mem.imgmode==='all')card.append(wrap,btn);
   let user=null;
   const apply=()=>{
     const on=user!=null?user:showImg();
     wrap.replaceChildren();
-    if(on)wrap.append(h('img',{src:'i/'+c.id+'_'+String(s.n).padStart(3,'0')+'.webp',loading:'lazy',decoding:'async',width:1000,height:s.ih||563,alt:'ภาพสไลด์ '+s.n+' — '+(s.t||'')}));
-    btn.textContent=on?'ซ่อนภาพสไลด์':'ดูภาพสไลด์ต้นฉบับ';
+    if(on)wrap.append(h('img',{src:IMGDIR+c.id+'_'+String(s.n).padStart(3,'0')+'.webp',loading:'lazy',decoding:'async',width:1000,height:s.ih||563,alt:'ภาพสไลด์ '+s.n+' — '+(s.t||'')}));
+    btn.textContent=on?'ซ่อนภาพสไลด์':'ดูภาพสไลด์ประกอบ';
   };
   btn.addEventListener('click',()=>{const on=wrap.childElementCount>0;user=!on;apply()});
   card._apply=()=>{user=null;apply()};apply();
+  if(E&&!skip&&s.b.length){
+    const raw=h('details',{class:'raw'},h('summary',null,'ข้อความต้นฉบับบนสไลด์'));
+    const rb=h('div',{class:'sb'});let ul=null;
+    s.b.forEach(b=>{if(b[0]==='li'){if(!ul){ul=h('ul');rb.append(ul)}ul.append(h('li',null,b[1]));return}ul=null;
+      if(b[0]==='chips')rb.append(h('div',{class:'chips'},b[1].map(x=>h('span',null,x))));
+      else if(b[0]==='pre')rb.append(h('pre',null,h('code',null,b[1])));else rb.append(h('p',null,b[1]));});
+    raw.append(rb);card.append(raw);
+  }
   return card;
 }
 
@@ -152,7 +176,7 @@ function renderContent(c,body){
   const seg=h('div',{class:'seg',role:'group','aria-label':'การแสดงภาพสไลด์'},
     [['auto','อัตโนมัติ'],['off','ข้อความล้วน'],['all','ภาพทุกสไลด์']].map(([k,l])=>h('button',{type:'button',class:mem.imgmode===k?'on':'',onclick:e=>{
       mem.imgmode=k;save();$$('button',seg).forEach(b=>b.classList.remove('on'));e.currentTarget.classList.add('on');$$('.slide',main).forEach(x=>x._apply&&x._apply());}},l)));
-  main.append(h('div',{class:'tool-bar'},h('span',null,'ภาพสไลด์ต้นฉบับ:'),seg,h('span',null,'“อัตโนมัติ” แสดงภาพเฉพาะสไลด์ที่เป็นตาราง/แผนภาพ')));
+  main.append(h('div',{class:'tool-bar'},h('span',null,'ภาพสไลด์ประกอบ:'),seg,h('span',null,'“อัตโนมัติ” แสดงภาพเฉพาะสไลด์ที่ต้องใช้ภาพจึงจะเห็นภาพ')));
   c.secs.forEach((sec,i)=>{
     const slides=c.slides.filter(s=>s.n>=sec.a&&s.n<=sec.b);
     const ck=h('span',{class:'ck'+(done[i]?' done':'')},done[i]?'✓':'');
@@ -258,7 +282,7 @@ function scenEl(c,s,i,upd){
 const idx=[];
 DATA.forEach(c=>c.slides.forEach(s=>{
   const txt=(s.t+' \n '+s.b.map(b=>b[0]==='chips'?b[1].join(' · '):b[1]).join(' \n ')).replace(/\s+/g,' ');
-  idx.push({ch:c.id,n:s.n,t:s.t,txt,low:txt.toLowerCase()});
+  const ex=(window.EXPL&&window.EXPL[c.id]&&window.EXPL[c.id][s.n])||null;const full=(txt+' \n '+(ex?ex.body.replace(/[`*#|]/g,' '):'')).replace(/\s+/g,' ');idx.push({ch:c.id,n:s.n,t:(ex&&ex.title)||s.t,txt:full,low:full.toLowerCase()});
 }));
 const q=$('#q'),res=$('#results');let tm=null;
 function search(){

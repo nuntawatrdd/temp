@@ -193,3 +193,9 @@ table.t th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:va
 
 .main,.chbody,.scen,.tools{min-width:0}
 html,body{overflow-x:hidden}
+
+.sb.ex{font-size:16px}.sb.ex h4{font-size:15px;margin:16px 0 4px}
+.sb code,.sb.ex code{font:13.5px var(--mono);background:var(--surface2);border:1px solid var(--line);border-radius:5px;padding:0 5px}
+.sb pre code{background:none;border:0;padding:0}
+.tw{overflow:auto;margin:8px 0}
+details.raw{margin-top:10px;font-size:13.5px;color:var(--muted)}details.raw summary{cursor:pointer}details.raw .sb{margin-top:6px}
