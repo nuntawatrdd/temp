@@ -20,8 +20,8 @@ window.__h=h;
 /* ---------- safe storage ---------- */
 const store={get(k,d){try{const v=localStorage.getItem('csg:'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
   set(k,v){try{localStorage.setItem('csg:'+k,JSON.stringify(v))}catch(e){}}};
-let mem={done:store.get('done',{}),sc:store.get('sc',{}),imgmode:store.get('imgmode','auto'),theme:store.get('theme',null)};
-const save=()=>{store.set('done',mem.done);store.set('sc',mem.sc);store.set('imgmode',mem.imgmode)};
+let mem={qz:store.get('qz',{}),done:store.get('done',{}),sc:store.get('sc',{}),imgmode:store.get('imgmode','auto'),theme:store.get('theme',null)};
+const save=()=>{store.set('qz',mem.qz);store.set('done',mem.done);store.set('sc',mem.sc);store.set('imgmode',mem.imgmode)};
 if(mem.theme)document.documentElement.dataset.theme=mem.theme;
 $('#theme').addEventListener('click',()=>{
   const dark=document.documentElement.dataset.theme?document.documentElement.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
@@ -30,6 +30,7 @@ $('#theme').addEventListener('click',()=>{
 
 const app=$('#app');
 const scenCount=id=>(SCEN[id]||[]).length;
+const quizCount=id=>((window.QUIZ||{})[id]||[]).length;
 const toolCount=id=>(TOOLS[id]||[]).length;
 function secProgress(id){const c=CH[id];const d=mem.done[id]||{};return c.secs.filter((_,i)=>d[i]).length}
 function scenProgress(id){const l=SCEN[id]||[];let n=0;l.forEach((_,i)=>{if(mem.sc[id+':'+i])n++});return n}
@@ -39,9 +40,9 @@ let cur={ch:null,tab:null};
 function parse(){
   const hsh=(location.hash||'').replace('#','');
   if(!hsh||hsh==='home')return{view:'home'};
-  const m=hsh.match(/^(m08|w11|w12|w13|w14)(?:-(tools|scen|s(\d+)|sec(\d+)))?$/);
+  const m=hsh.match(/^(m08|w11|w12|w13|w14)(?:-(tools|scen|quiz|s(\d+)|sec(\d+)))?$/);
   if(!m)return{view:'home'};
-  return{view:'ch',ch:m[1],tab:m[2]==='tools'?'tools':m[2]==='scen'?'scen':'content',slide:m[3]?+m[3]:null,sec:m[4]!=null?+m[4]:null};
+  return{view:'ch',ch:m[1],tab:m[2]==='tools'?'tools':m[2]==='scen'?'scen':m[2]==='quiz'?'quiz':'content',slide:m[3]?+m[3]:null,sec:m[4]!=null?+m[4]:null};
 }
 function route(){
   const r=parse();
@@ -70,6 +71,7 @@ function renderHome(){
   const totalSlides=DATA.reduce((a,c)=>a+c.slides.length,0);
   const totalSc=DATA.reduce((a,c)=>a+scenCount(c.id),0);
   const totalTools=DATA.reduce((a,c)=>a+toolCount(c.id),0);
+  const totalQuiz=DATA.reduce((a,c)=>a+quizCount(c.id),0);
   app.replaceChildren(
     h('section',{class:'hero'},
       h('h1',null,'เรียน AWS Cloud แบบเนื้อหาเต็ม + ลงมือคิดเอง'),
@@ -78,14 +80,15 @@ function renderHome(){
         h('span',{class:'chip'},h('b',null,DATA.length),' บท'),
         h('span',{class:'chip'},h('b',null,totalSlides),' สไลด์เนื้อหาเต็ม'),
         h('span',{class:'chip'},h('b',null,totalTools),' เครื่องมือจำลอง'),
-        h('span',{class:'chip'},h('b',null,totalSc),' scenario'))),
+        h('span',{class:'chip'},h('b',null,totalSc),' scenario'),
+        h('span',{class:'chip'},h('b',null,totalQuiz),' ข้อสอบในคลัง'))),
     h('div',{class:'cards'},DATA.map(c=>{
       const sp=secProgress(c.id),sc=scenProgress(c.id);
       const pct=Math.round(100*(sp+sc)/(c.secs.length+scenCount(c.id)));
       return h('a',{class:'card',href:'#'+c.id,dataset:{ch:c.id}},
         h('span',{class:'tag'},c.short),h('h3',null,c.title),h('div',{class:'th'},c.th),h('p',null,c.desc),
         h('div',{class:'bar'},h('i',{style:'width:'+pct+'%'})),
-        h('div',{class:'meta'},h('span',null,c.slides.length+' สไลด์'),h('span',null,toolCount(c.id)+' เครื่องมือ'),h('span',null,scenCount(c.id)+' scenario'),h('span',null,'ความคืบหน้า '+pct+'%')));
+        h('div',{class:'meta'},h('span',null,c.slides.length+' สไลด์'),h('span',null,toolCount(c.id)+' เครื่องมือ'),h('span',null,scenCount(c.id)+' scenario'),h('span',null,quizCount(c.id)+' ข้อสอบ'),h('span',null,'ความคืบหน้า '+pct+'%')));
     })),
     h('div',{class:'howto'},
       h('div',null,h('b',null,'เนื้อหาเต็ม'),'ทุกสไลด์เรียงตามหัวข้อ กด “ดูภาพสไลด์ต้นฉบับ” เพื่อดูตาราง/แผนภาพที่ข้อความอย่างเดียวถ่ายทอดไม่ครบ'),
@@ -100,7 +103,8 @@ function renderChapter(r){
   const tabs=h('nav',{class:'tabs'},
     h('a',{class:'tab'+(r.tab==='content'?' on':''),href:'#'+c.id},'เนื้อหาเต็ม',h('small',null,c.slides.length)),
     h('a',{class:'tab'+(r.tab==='tools'?' on':''),href:'#'+c.id+'-tools'},'เครื่องมือจำลอง',h('small',null,toolCount(c.id))),
-    h('a',{class:'tab'+(r.tab==='scen'?' on':''),href:'#'+c.id+'-scen'},'Scenario',h('small',null,scenCount(c.id))));
+    h('a',{class:'tab'+(r.tab==='scen'?' on':''),href:'#'+c.id+'-scen'},'Scenario',h('small',null,scenCount(c.id))),
+    h('a',{class:'tab'+(r.tab==='quiz'?' on':''),href:'#'+c.id+'-quiz'},'แบบทดสอบ',h('small',null,quizCount(c.id))));
   const head=h('div',{class:'chhead'},
     h('div',{class:'crumb'},h('a',{href:'#home'},'← ทุกบท'),' / '+c.short),
     h('h1',null,c.title),h('div',{class:'th'},c.th),h('div',{class:'src'},c.src),tabs);
@@ -108,6 +112,7 @@ function renderChapter(r){
   app.replaceChildren(h('div',{dataset:{ch:c.id}},head,body));
   if(r.tab==='content')renderContent(c,body);
   else if(r.tab==='tools')renderTools(c,body);
+  else if(r.tab==='quiz')renderQuiz(c,body);
   else renderScen(c,body);
 }
 
@@ -276,6 +281,80 @@ function scenEl(c,s,i,upd){
   }
   if(s.ref)card.append(h('div',{class:'ref'},'อ้างอิง: '+s.ref));
   return card;
+}
+
+
+/* ---------- quiz ---------- */
+const LV={know:'ความรู้พื้นฐาน',apply:'ประยุกต์',scen:'Scenario'};
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function renderQuiz(c,body){
+  const Q=((window.QUIZ||{})[c.id]||[]);
+  if(!Q.length){body.append(h('div',{class:'out'},'ยังไม่มีข้อสอบในบทนี้'));return}
+  const topics=[...new Set(Q.map(q=>q.topic))];
+  const F={level:'all',topic:'all',status:'all',shuffle:true};
+  const stat=q=>mem.qz[q.id];
+  const wrap=h('div',{class:'quiz'}),panel=h('div',{class:'qpanel'}),stage=h('div',{class:'qstage'});
+  wrap.append(panel,stage);body.append(wrap);
+  let deck=[],i=0,sess=[];
+  const seg=(label,key,items)=>h('div',{class:'qf'},h('span',null,label),h('div',{class:'seg'},items.map(([v,l])=>h('button',{type:'button',class:F[key]===v?'on':'',onclick:()=>{F[key]=v;drawPanel()}},l))));
+  function counts(){
+    const t=Q.length,ok=Q.filter(q=>stat(q)==='ok').length,bad=Q.filter(q=>stat(q)==='bad').length;
+    return {t,ok,bad};
+  }
+  function filtered(){
+    return Q.filter(q=>(F.level==='all'||q.level===F.level)&&(F.topic==='all'||q.topic===F.topic)&&(F.status==='all'||(F.status==='new'&&!stat(q))||(F.status==='bad'&&stat(q)==='bad')));
+  }
+  function drawPanel(){
+    const k=counts(),n=filtered().length;
+    panel.replaceChildren(
+      h('div',{class:'qhead'},h('div',null,h('b',null,'คลังข้อสอบ '+k.t+' ข้อ'),h('div',{class:'hint'},'ทำแล้ว '+(k.ok+k.bad)+' · ถูก '+k.ok+' · ผิด '+k.bad+' (บันทึกในเบราว์เซอร์นี้)')),
+        h('button',{class:'btn',type:'button',onclick:()=>{Q.forEach(q=>delete mem.qz[q.id]);save();drawPanel()}},'ล้างผลทั้งหมด')),
+      seg('ระดับ','level',[['all','ทั้งหมด'],['know','ความรู้พื้นฐาน'],['apply','ประยุกต์'],['scen','Scenario']]),
+      seg('สถานะ','status',[['all','ทุกข้อ'],['new','ที่ยังไม่ทำ'],['bad','ที่เคยผิด']]),
+      h('div',{class:'qf'},h('span',null,'หัวข้อ'),h('div',{class:'tchips'},[['all','ทั้งหมด ('+Q.length+')'],...topics.map(t=>[t,t+' ('+Q.filter(q=>q.topic===t).length+')'])].map(([v,l])=>h('button',{type:'button',class:'tchip'+(F.topic===v?' on':'')+(/ELB/.test(v)?' hot':''),onclick:()=>{F.topic=v;drawPanel()}},l)))),
+      h('div',{class:'qf'},h('label',{class:'sw'},h('input',{type:'checkbox',checked:F.shuffle,onchange:e=>{F.shuffle=e.target.checked}}),' สลับลำดับข้อและตัวเลือก')),
+      h('div',{style:'margin-top:10px'},h('button',{class:'btn pri',type:'button',disabled:!n,onclick:start},'เริ่มทำ '+n+' ข้อ')));
+    if(!sess.length&&!deck.length)stage.replaceChildren(h('div',{class:'hint'},'เลือกตัวกรองแล้วกด “เริ่มทำ”'));
+  }
+  function start(){deck=filtered();if(F.shuffle)deck=shuf(deck);i=0;sess=[];show();stage.scrollIntoView({behavior:'smooth',block:'start'})}
+  function show(){
+    if(i>=deck.length){summary();return}
+    const q=deck[i];let done=false;
+    const order=q.opts.map((_,k)=>k);const ord=F.shuffle?shuf(order):order;
+    const opts=h('div',{class:'opts'});
+    ord.forEach((k,pos)=>{
+      const b=h('button',{class:'opt',type:'button'},h('span',null,String.fromCharCode(65+pos)+'. '+q.opts[k].t));
+      b.addEventListener('click',()=>{
+        if(done)return;done=true;const good=k===q.ans;
+        $$('.opt',opts).forEach((x,p2)=>{const kk=ord[p2];x.disabled=true;x.append(h('span',{class:'why'},q.opts[kk].why));if(kk===q.ans)x.classList.add('right');else if(kk===k)x.classList.add('wrong')});
+        mem.qz[q.id]=good?'ok':'bad';save();sess.push({q,good});
+        nx.hidden=false;nx.focus();drawCounts();
+      });
+      opts.append(b);
+    });
+    const nx=h('button',{class:'btn pri',type:'button',hidden:true,onclick:()=>{i++;show();stage.scrollIntoView({block:'start'})}},i+1>=deck.length?'ดูสรุปผล':'ข้อถัดไป →');
+    const prog=h('div',{class:'bar'},h('i',{style:'width:'+Math.round(100*i/deck.length)+'%'}));
+    stage.replaceChildren(h('section',{class:'sc'},
+      h('div',{class:'qmeta'},h('span',{class:'no'},'ข้อ '+(i+1)+' / '+deck.length),h('span',{class:'tchip sm'},q.topic),h('span',{class:'lv lv-'+q.level},LV[q.level])),prog,
+      q.story?h('div',{class:'story'},q.story):null,h('div',{class:'q'},q.q),opts,
+      h('div',{style:'margin-top:12px;display:flex;gap:10px;align-items:center'},nx,q.ref?h('span',{class:'ref',style:'margin:0'},'อ้างอิง: '+q.ref):null)));
+  }
+  function drawCounts(){const hd=$('.qhead .hint',panel);if(hd){const k=counts();hd.textContent='ทำแล้ว '+(k.ok+k.bad)+' · ถูก '+k.ok+' · ผิด '+k.bad+' (บันทึกในเบราว์เซอร์นี้)'}}
+  function summary(){
+    const ok=sess.filter(s=>s.good).length,tot=sess.length;
+    const by=(key)=>{const m={};sess.forEach(s=>{const k=s.q[key];(m[k]=m[k]||[0,0]);m[k][1]++;if(s.good)m[k][0]++});return Object.entries(m)};
+    const rows=(key,name)=>by(key).sort((a,b)=>a[1][0]/a[1][1]-b[1][0]/b[1][1]).map(([k,[a,b]])=>h('tr',null,h('td',null,key==='level'?LV[k]:k),h('td',null,a+'/'+b),h('td',null,h('div',{class:'bar'},h('i',{style:'width:'+Math.round(100*a/b)+'%'})))));
+    const wrong=sess.filter(s=>!s.good).map(s=>s.q);
+    stage.replaceChildren(h('section',{class:'sc'},h('div',{class:'no'},'สรุปผลรอบนี้'),h('h3',null,'ได้ '+ok+' / '+tot+' ข้อ ('+Math.round(100*ok/Math.max(1,tot))+'%)'),
+      h('div',{class:'tw'},h('table',{class:'t'},h('thead',null,h('tr',null,h('th',null,'ระดับ'),h('th',null,'ถูก'),h('th',null,''))),h('tbody',null,rows('level')))),
+      h('div',{class:'tw'},h('table',{class:'t'},h('thead',null,h('tr',null,h('th',null,'หัวข้อ (เรียงจากอ่อนสุด)'),h('th',null,'ถูก'),h('th',null,''))),h('tbody',null,rows('topic')))),
+      h('div',{class:'row',style:'margin-top:12px'},
+        wrong.length?h('button',{class:'btn pri',type:'button',onclick:()=>{deck=F.shuffle?shuf(wrong):wrong;i=0;sess=[];show()}},'ทำซ้ำเฉพาะข้อที่ผิด ('+wrong.length+')'):null,
+        h('button',{class:'btn',type:'button',onclick:start},'ทำชุดนี้ใหม่'),
+        h('button',{class:'btn',type:'button',onclick:()=>{deck=[];sess=[];drawPanel();window.scrollTo({top:0,behavior:'smooth'})}},'เปลี่ยนตัวกรอง'))));
+    drawPanel();
+  }
+  drawPanel();
 }
 
 /* ---------- search ---------- */

@@ -199,3 +199,23 @@ html,body{overflow-x:hidden}
 .sb pre code{background:none;border:0;padding:0}
 .tw{overflow:auto;margin:8px 0}
 details.raw{margin-top:10px;font-size:13.5px;color:var(--muted)}details.raw summary{cursor:pointer}details.raw .sb{margin-top:6px}
+
+/* quiz */
+.quiz{max-width:880px}
+.qpanel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.qhead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.qf{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}
+.qf>span{min-width:52px}
+.tchips{display:flex;gap:6px;flex-wrap:wrap}
+.tchip{padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);font-size:13px}
+.tchip.on{background:var(--c);border-color:var(--c);color:#fff}
+.tchip.hot{border-color:var(--c);font-weight:700}
+.tchip.sm{padding:1px 10px;font-size:12px;cursor:default}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .tchip.on{color:#11151d}}
+:root[data-theme=dark] .tchip.on{color:#11151d}
+.sw{display:flex;gap:8px;align-items:center;color:var(--ink);font-size:14px}
+.sw input{accent-color:var(--c)}
+.qmeta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.lv{font-size:12px;font-weight:700;padding:1px 10px;border-radius:999px;border:1px solid var(--line)}
+.lv-know{color:var(--good)}.lv-apply{color:var(--warn)}.lv-scen{color:var(--c)}
+.qstage .bar{margin:4px 0 12px}
