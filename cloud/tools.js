@@ -111,7 +111,7 @@ TOOLS.w11.push({title:'จำลอง EC2 Auto Scaling (step scaling policy)',
   const inst=h('div',{class:'inst'}),kp=h('div',{class:'kpis'}),L=h('div',{class:'log'}),log=logger(L);
   const cpu=()=>Math.min(100,100*(+load.value)/(S.n*(+cap.value)));
   const step=c=>c>=71?30:c>=61?10:c>=40?0:c>=30?-10:-30;
-  const col=c=>c>=71?'#c92a2a':c>=61?'#e67700':c>=40?'#2b8a3e':'#1c7ed6';
+  const col=c=>c>=71?'var(--color-bad)':c>=61?'var(--ch-amber)':c>=40?'var(--ch-green)':'var(--ch-blue)';
   function draw(){
     const c=cpu();
     inst.replaceChildren(...Array.from({length:S.n},(_,i)=>h('i',{style:'background:'+col(c)},'i-'+(i+1))));
@@ -241,7 +241,7 @@ TOOLS.w12.push({title:'SQS: Visibility timeout และข้อความท
     const bars=Array.from({length:n},(_,k)=>{const s=k*v,e=Math.min(p,(k+1)*v);const bad=k+1>m;
       return h('div',{style:'display:flex;align-items:center;gap:8px;margin:4px 0;font-size:13px'},
         h('span',{style:'width:120px;color:var(--muted)'},'ครั้งที่ '+(k+1)+' @ '+s+'s'),
-        h('div',{style:'flex:1;background:var(--bg);border:1px solid var(--line);border-radius:6px;height:20px;position:relative'},h('div',{style:'position:absolute;left:'+(100*s/p)+'%;width:'+(100*(e-s)/p)+'%;top:0;bottom:0;border-radius:5px;background:'+(bad?'#c92a2a':k===0?'#2b8a3e':'#e67700')})),
+        h('div',{style:'flex:1;background:var(--bg);border:1px solid var(--line);border-radius:6px;height:20px;position:relative'},h('div',{style:'position:absolute;left:'+(100*s/p)+'%;width:'+(100*(e-s)/p)+'%;top:0;bottom:0;border-radius:5px;background:'+(bad?'var(--color-bad)':k===0?'var(--ch-green)':'var(--ch-amber)')})),
         h('span',{style:'width:150px'},bad?'เกิน maxReceiveCount → DLQ':k===0?'ต้นฉบับ':'ซ้ำ (visible อีกครั้ง)'));});
     tl.replaceChildren(...bars);
     out.innerHTML=p<=v?'<b class="good">ประมวลผลเสร็จก่อน timeout ('+p+'s ≤ '+v+'s)</b> → consumer ลบข้อความ → ถูกประมวลผล <b>1 ครั้ง</b>':
@@ -302,7 +302,7 @@ TOOLS.w14.push({title:'4 วิธีจ่ายค่า instance เดีย
  mount(el){
   const p=num(0.1,0.001,100,0.001),hrs=num(730,1,744);
   const body=h('div');
-  const M=[['On-Demand',0,'#868e96','ไม่ผูกมัด · AWS เรียกคืนไม่ได้','โหลดไม่แน่นอน, ผันผวน, ระยะสั้น'],['Savings Plans',72,'#1c7ed6','$ ต่อชั่วโมง 1 หรือ 3 ปี · ไม่ถูกเรียกคืน','baseline ที่รันตลอด'],['Reserved Instances',72,'#7048e8','ระบุ instance type 1 หรือ 3 ปี · ไม่ถูกเรียกคืน','โหลดคงที่ เปลี่ยนน้อย'],['Spot',90,'#2b8a3e','ไม่ผูกมัด · AWS เรียกคืนได้ (เตือน 2 นาที)','งาน stateless ที่ถูกขัดจังหวะได้']];
+  const M=[['On-Demand',0,'var(--ch-grey)','ไม่ผูกมัด · AWS เรียกคืนไม่ได้','โหลดไม่แน่นอน, ผันผวน, ระยะสั้น'],['Savings Plans',72,'var(--ch-blue)','$ ต่อชั่วโมง 1 หรือ 3 ปี · ไม่ถูกเรียกคืน','baseline ที่รันตลอด'],['Reserved Instances',72,'var(--ch-violet)','ระบุ instance type 1 หรือ 3 ปี · ไม่ถูกเรียกคืน','โหลดคงที่ เปลี่ยนน้อย'],['Spot',90,'var(--ch-green)','ไม่ผูกมัด · AWS เรียกคืนได้ (เตือน 2 นาที)','งาน stateless ที่ถูกขัดจังหวะได้']];
   const f=()=>{
     const base=(+p.value)*(+hrs.value);
     body.replaceChildren(h('table',{class:'t'},h('thead',null,h('tr',null,['รูปแบบ','ส่วนลด (สูงสุด)','ต้นทุน/เดือน (ตัวอย่าง)','ผูกมัด','เหมาะกับ'].map(x=>h('th',null,x)))),
@@ -318,7 +318,7 @@ TOOLS.w14.push({title:'TCO 3 ปี: Case A (RegisterFast) vs Case B (คลั�
  mount(el){
   const D={A:{n:'Case A — RegisterFast (ใช้งานเป็น spike 6 สัปดาห์/ปี)',on:[119,26,35,45],cl:[24,2,14,29],why:'On-premises จ่ายทั้งปีเพื่อ peak ที่มีแค่ 6 สัปดาห์ · Cloud จ่าย peak เฉพาะตอนเกิดขึ้น → Cloud ถูกกว่า ~69%'},
            B:{n:'Case B — คลังวิดีโอบรรยาย (steady, ส่งข้อมูลออกมาก)',on:[156,187,76,90],cl:[33,224,408,108],why:'Network คิดเป็น ~53% ของบิล cloud · on-prem ใช้ลิงก์ flat-rate ที่มหาวิทยาลัยจ่ายอยู่แล้ว → On-prem ถูกกว่า (cloud แพงกว่า ~52%)'}};
-  const cols=['#1c7ed6','#7048e8','#e67700','#2b8a3e'],names=['Server','Storage','Network','IT labor'];
+  const cols=['var(--ch-blue)','var(--ch-violet)','var(--ch-amber)','var(--ch-green)'],names=['Server','Storage','Network','IT labor'];
   const sel=h('select',null,h('option',{value:'A'},'Case A'),h('option',{value:'B'},'Case B'));
   const body=h('div');
   const bar=(label,arr,max)=>{const t=arr.reduce((a,b)=>a+b,0);return h('div',null,h('div',{style:'font-size:13px;margin-top:10px'},h('b',null,label),'  รวม $'+t+'k'),

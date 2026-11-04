@@ -3,29 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Study Hub — Cloud · IoT</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap">
-<style>
-:root{--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#667085;--bd:#e3e6ee}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1218;--card:#181c25;--tx:#e8eaf0;--mut:#9aa3b5;--bd:#2a3040}}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Noto Sans Thai",system-ui,sans-serif;background:var(--bg);color:var(--tx);padding:24px}
-h1{margin:0 0 6px;font-size:30px}
-p.s{margin:0 0 28px;color:var(--mut)}
-.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;width:100%;max-width:700px}
-a.c{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:26px;transition:transform .15s,border-color .15s}
-a.c:hover{transform:translateY(-3px);border-color:#0f766e}
-.e{font-size:40px}
-a.c b{display:block;font-size:20px;margin:8px 0 4px}
-a.c span{color:var(--mut);font-size:14px}
-</style>
+<title>Study Hub: Cloud, IoT และ Network Systems</title>
+<meta name="description" content="ศูนย์รวมสรุปและแบบฝึกหัดสามวิชา: Cloud, IoT และ Network Systems">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="hub.css">
 </head>
 <body>
-<h1>📚 Study Hub</h1>
-<p class="s">เลือกวิชาที่ต้องการ</p>
-<div class="row">
-  <a class="c" href="cloud/index.html"><div class="e">☁️</div><b>Cloud</b><span>AWS Cloud Study Guide — Databases (Week 11–14): เนื้อหา, scenario, เครื่องมือ และแบบฝึกหัด</span></a>
-  <a class="c" href="iot/index.html"><div class="e">📡</div><b>IoT</b><span>ข้อสอบ Final ปรนัย 115 ข้อ จากสไลด์ทั้งหมด (MQTT, AMQP, CoAP, LoRa, Wi-Fi, Raspberry Pi, MCP ฯลฯ)</span></a>
-</div>
+<header class="top">
+  <a class="brand" href="index.html"><span class="logo" aria-hidden="true">SH</span><span><b>Study Hub</b><small>Cloud, IoT, Network Systems</small></span></a>
+  <button id="theme" class="icon" title="สลับโหมดสว่าง/มืด" aria-label="สลับธีม">◐</button>
+</header>
+<main id="app">
+  <section class="hero">
+    <h1>Study Hub</h1>
+    <p>เลือกวิชาที่ต้องการ</p>
+  </section>
+  <div class="cards">
+    <a class="card" href="cloud/index.html" style="--cc:var(--ch-orange)"><h2>Cloud</h2><p>AWS Cloud Study Guide: Databases (Week 11 ถึง 14) เนื้อหา, scenario, เครื่องมือ และแบบฝึกหัด</p></a>
+    <a class="card" href="iot/index.html" style="--cc:var(--ch-teal)"><h2>IoT</h2><p>สรุปรายบท แบบฝึกประยุกต์ และข้อสอบรวม (MQTT, AMQP, CoAP, LoRa, Wi-Fi, Raspberry Pi, MCP ฯลฯ)</p></a>
+    <a class="card" href="ins/index.html" style="--cc:var(--ch-blue)"><h2>Network Systems (INS)</h2><p>Network Layer, TCP/QUIC, Link Layer, Physical Layer: สรุปรายบท กล่อง "ต้องจำ" และแบบฝึกประยุกต์</p></a>
+  </div>
+</main>
+<footer class="foot">เลือกวิชาเพื่อเริ่มอ่านสรุปและทำแบบฝึกหัด</footer>
+<script>
+(function () {
+  var k = "hub:theme", r = document.documentElement;
+  try { var t = JSON.parse(localStorage.getItem(k)); if (t) r.dataset.theme = t; } catch (e) {}
+  document.getElementById("theme").onclick = function () {
+    var d = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme:dark)").matches;
+    r.dataset.theme = d ? "light" : "dark";
+    try { localStorage.setItem(k, JSON.stringify(r.dataset.theme)); } catch (e) {}
+  };
+})();
+</script>
 </body>
 </html>

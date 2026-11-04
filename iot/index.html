@@ -3,173 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IoT Final Exam — 115 ข้อ</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap">
-<style>
-:root{--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#667085;--bd:#e3e6ee;--pri:#0f766e;--ok:#15803d;--okb:#dcfce7;--bad:#b91c1c;--badb:#fee2e2}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1218;--card:#181c25;--tx:#e8eaf0;--mut:#9aa3b5;--bd:#2a3040;--pri:#2dd4bf;--ok:#4ade80;--okb:#12301d;--bad:#f87171;--badb:#3a1618}}
-*{box-sizing:border-box}
-body{margin:0;font-family:"Noto Sans Thai",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
-header{display:flex;align-items:center;gap:12px;padding:12px 20px;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:5}
-header a{color:var(--mut);text-decoration:none;font-size:14px}
-header b{font-size:17px}
-header .sp{flex:1}
-main{max-width:820px;margin:0 auto;padding:20px 16px 60px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;margin-bottom:16px}
-h1,h2{margin:.2em 0 .4em}
-button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:9px 16px}
-button.pri{background:var(--pri);border-color:var(--pri);color:#fff;font-weight:700}
-button:disabled{opacity:.45;cursor:default}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.chips label{border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:14px;cursor:pointer;user-select:none}
-.chips input{margin-right:6px}
-.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0 14px}
-.bar i{display:block;height:100%;background:var(--pri);width:0}
-.meta{display:flex;justify-content:space-between;color:var(--mut);font-size:14px}
-.tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:12px;background:var(--bd);color:var(--mut)}
-.q{font-size:18px;font-weight:500;margin:10px 0 14px}
-.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 14px;border-radius:10px}
-.opt:hover:not(:disabled){border-color:var(--pri)}
-.opt.ok{background:var(--okb);border-color:var(--ok)}
-.opt.no{background:var(--badb);border-color:var(--bad)}
-.opt:disabled{opacity:1;cursor:default}
-.why{margin-top:12px;padding:12px 14px;border-left:4px solid var(--pri);background:var(--bg);border-radius:6px;font-size:15px}
-.nav{display:flex;gap:10px;justify-content:space-between;margin-top:16px}
-.score{font-size:44px;font-weight:700;color:var(--pri)}
-.rev{border-top:1px solid var(--bd);padding:12px 0;font-size:15px}
-.rev .a{color:var(--ok)}.rev .b{color:var(--bad)}
-.nt h2{margin-top:1.2em;font-size:17px;color:var(--pri)}.nt ul{padding-left:20px;margin:.3em 0}.nt table{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}.nt td,.nt th{border:1px solid var(--bd);padding:5px 8px;text-align:left}.nt code{background:var(--bg);padding:1px 5px;border-radius:4px;font-size:13px}
-.toc{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}.toc a{display:block;text-decoration:none;color:inherit;border:1px solid var(--bd);border-radius:12px;padding:14px;background:var(--card)}.toc a:hover{border-color:var(--pri)}.toc small{color:var(--mut)}
-.nt a{color:var(--pri)}
-header a.on{color:var(--pri);font-weight:700}
-.dg{border:1px solid var(--bd);border-radius:12px;padding:12px;margin:14px 0;background:var(--bg)}.dg.in{border:0;padding:0;margin:14px 0 0}
-.dgt{font-weight:700;margin-bottom:6px;font-size:15px}.dgn{font-size:13px;color:var(--mut);margin-top:6px}
-.dg svg{width:100%;height:auto;display:block}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-@media(max-width:640px){.two{grid-template-columns:1fr}.three{grid-template-columns:1fr}}
-.dg .bx{fill:var(--card);stroke:var(--mut);stroke-width:1.4}.dg .bx.hd{stroke:var(--pri);stroke-width:2.2}.dg .bx.ok{fill:var(--okb);stroke:var(--ok)}.dg .bx.bad{fill:var(--badb);stroke:var(--bad)}
-.dg .ln{stroke:var(--tx);stroke-width:1.6;fill:none}.dg .ln.ok{stroke:var(--ok)}.dg .ln.bad{stroke:var(--bad)}.dg .ln.lf{stroke:var(--bd);stroke-width:1.3}.dg .ah{fill:var(--tx)}
-.dg .t{fill:var(--tx);font-size:13px;font-family:inherit}.dg .t.sm{font-size:11.5px;fill:var(--mut)}.dg .t.ok{fill:var(--ok)}.dg .t.bad{fill:var(--bad)}.dg .t.b{font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:5px;margin-top:10px}
-.grid span{font-size:12px;text-align:center;padding:4px 0;border-radius:6px;background:var(--bd);cursor:pointer}
-.grid .ok{background:var(--ok);color:#fff}.grid .no{background:var(--bad);color:#fff}.grid .cur{outline:2px solid var(--pri)}
-</style>
+<title>IoT Study Guide: เนื้อหา สรุป และแบบฝึกประยุกต์</title>
+<meta name="description" content="สรุปเนื้อหาวิชา IoT ทุกบท พร้อมแผนภาพและแบบฝึกประยุกต์สำหรับเตรียมสอบ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<header><a href="../index.html">← หน้าหลัก</a><b>📡 IoT Final Exam</b><span class="sp"></span><a href="#notes" id="tn">📖 สรุปเนื้อหา</a><a href="#exam" id="te">📝 ข้อสอบ</a></header>
-<main id="app"></main>
-<script src="questions.js"></script>
-<script src="notes.js"></script>
-<script src="diagrams.js"></script>
+<header class="top">
+  <button id="menu" class="icon" aria-label="หัวข้อ">☰</button>
+  <a class="brand" href="#home"><span class="logo" aria-hidden="true">IoT</span><span><b>IoT Study Guide</b><small>MQTT, AMQP, CoAP, LoRa, Wi-Fi, Pi, MCP</small></span></a>
+  <div class="search">
+    <input id="q" type="search" placeholder="ค้นหาเนื้อหา… เช่น QoS, Fresnel, I2C" autocomplete="off" aria-label="ค้นหา">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <a class="icon" href="../index.html" title="หน้าหลัก Study Hub" aria-label="หน้าหลัก Study Hub">⌂</a>
+  <button id="theme" class="icon" title="สลับโหมดสว่าง/มืด" aria-label="สลับธีม">◐</button>
+</header>
+<div class="shell">
+  <nav id="side" class="side" aria-label="หัวข้อ"></nav>
+  <main id="app"></main>
+</div>
+<footer class="foot">เนื้อหาสรุปจากสไลด์วิชา IoT. แบบฝึกเป็นโจทย์ประยุกต์ที่เพิ่มขึ้นเพื่อฝึกวิเคราะห์</footer>
 <script>
-(function () {
-  var app = document.getElementById("app");
-  var S = null; // state
-
-  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function counts() { var c = {}; QS.forEach(function (q) { c[q.t] = (c[q.t] || 0) + 1; }); return c; }
-
-  function home(pre) {
-    var c = counts(), chips = Object.keys(TOPICS).map(function (k) {
-      return '<label><input type="checkbox" value="' + k + '"' + (!pre || pre === k ? ' checked' : '') + '>' + esc(TOPICS[k]) + ' (' + c[k] + ')</label>';
-    }).join("");
-    app.innerHTML =
-      '<div class="card"><h1>ข้อสอบ IoT ปลายภาค</h1>' +
-      '<p>ปรนัย 4 ตัวเลือก รวม <b>' + QS.length + ' ข้อ</b> ครอบคลุมทุกสไลด์ (REST/Hono/WebSocket, MQTT, AMQP, CoAP, LoRa/LoRaWAN, Wi-Fi, Raspberry Pi, Sensor/I2C, AI & MCP) ยากง่ายปนกัน ตัวเลือกและลำดับข้อสลับสุ่มทุกครั้ง</p>' +
-      '<div class="chips" id="chips">' + chips + '</div>' +
-      '<label><input type="checkbox" id="shq" checked> สลับลำดับข้อ</label><br><br>' +
-      '<button class="pri" id="go">เริ่มทำข้อสอบ</button></div>';
-    document.getElementById("go").onclick = function () {
-      var sel = [].slice.call(document.querySelectorAll("#chips input:checked")).map(function (i) { return i.value; });
-      if (!sel.length) return alert("เลือกอย่างน้อย 1 หมวด");
-      start(sel, document.getElementById("shq").checked);
-    };
-  }
-
-  function start(sel, sh) {
-    var qs = QS.filter(function (q) { return sel.indexOf(q.t) >= 0; });
-    if (sh) shuffle(qs);
-    S = { items: qs.map(function (q) {
-      var o = [{ t: q.a, ok: true }].concat(q.w.map(function (w) { return { t: w, ok: false }; }));
-      return { q: q, opts: shuffle(o), pick: -1 };
-    }), i: 0 };
-    render();
-  }
-
-  function render() {
-    var it = S.items[S.i], n = S.items.length, done = S.items.filter(function (x) { return x.pick >= 0; }).length;
-    var h = '<div class="card"><div class="meta"><span>ข้อ ' + (S.i + 1) + ' / ' + n + '</span><span class="tag">' + esc(TOPICS[it.q.t]) + '</span></div>' +
-      '<div class="bar"><i style="width:' + (done / n * 100) + '%"></i></div>' +
-      '<div class="q">' + esc(it.q.q) + '</div>';
-    it.opts.forEach(function (o, k) {
-      var cls = it.pick < 0 ? "" : (o.ok ? " ok" : (k === it.pick ? " no" : ""));
-      h += '<button class="opt' + cls + '" data-k="' + k + '"' + (it.pick >= 0 ? " disabled" : "") + '><b>' + "ABCD"[k] + '.</b> ' + esc(o.t) + '</button>';
-    });
-    if (it.pick >= 0) h += '<div class="why"><b>' + (it.opts[it.pick].ok ? "✅ ถูกต้อง" : "❌ ผิด") + '</b> — ' + esc(it.q.why) + '</div>';
-    h += '<div class="nav"><button id="pv"' + (S.i === 0 ? " disabled" : "") + '>← ก่อนหน้า</button>' +
-      (S.i < n - 1 ? '<button class="pri" id="nx">ถัดไป →</button>' : '<button class="pri" id="fin">ส่งข้อสอบ / ดูคะแนน</button>') + '</div></div>';
-    h += '<div class="card"><div class="meta"><span>ข้ามไปข้อ (เขียว = ถูก, แดง = ผิด)</span><span>ตอบแล้ว ' + done + '/' + n + '</span></div><div class="grid">';
-    S.items.forEach(function (x, k) {
-      h += '<span data-j="' + k + '" class="' + (x.pick < 0 ? "" : (x.opts[x.pick].ok ? "ok" : "no")) + (k === S.i ? " cur" : "") + '">' + (k + 1) + '</span>';
-    });
-    app.innerHTML = h + '</div></div>';
-    [].forEach.call(app.querySelectorAll(".opt"), function (b) { b.onclick = function () { it.pick = +b.dataset.k; render(); }; });
-    [].forEach.call(app.querySelectorAll(".grid span"), function (b) { b.onclick = function () { S.i = +b.dataset.j; render(); window.scrollTo(0, 0); }; });
-    var pv = document.getElementById("pv"), nx = document.getElementById("nx"), fin = document.getElementById("fin");
-    pv.onclick = function () { S.i--; render(); window.scrollTo(0, 0); };
-    if (nx) nx.onclick = function () { S.i++; render(); window.scrollTo(0, 0); };
-    if (fin) fin.onclick = result;
-  }
-
-  function result() {
-    var n = S.items.length, right = 0, un = 0;
-    S.items.forEach(function (x) { if (x.pick < 0) un++; else if (x.opts[x.pick].ok) right++; });
-    var per = {};
-    S.items.forEach(function (x) { var p = per[x.q.t] || (per[x.q.t] = [0, 0]); p[1]++; if (x.pick >= 0 && x.opts[x.pick].ok) p[0]++; });
-    var h = '<div class="card"><h2>ผลคะแนน</h2><div class="score">' + right + ' / ' + n + ' (' + Math.round(right / n * 100) + '%)</div>' +
-      (un ? '<p>ยังไม่ได้ตอบ ' + un + ' ข้อ (นับเป็นผิด)</p>' : '') + '<h2>แยกตามหมวด</h2>';
-    Object.keys(per).forEach(function (k) { h += '<div class="meta"><span>' + esc(TOPICS[k]) + '</span><span>' + per[k][0] + '/' + per[k][1] + '</span></div><div class="bar"><i style="width:' + (per[k][0] / per[k][1] * 100) + '%"></i></div>'; });
-    h += '<div class="nav"><button id="back">กลับไปทบทวนข้อ</button><button class="pri" id="again">ทำใหม่</button></div></div>';
-    var wrong = S.items.filter(function (x) { return x.pick < 0 || !x.opts[x.pick].ok; });
-    if (wrong.length) {
-      h += '<div class="card"><h2>ข้อที่ผิด/ยังไม่ตอบ (' + wrong.length + ')</h2>';
-      wrong.forEach(function (x) {
-        h += '<div class="rev"><b>' + esc(x.q.q) + '</b><br>' +
-          (x.pick >= 0 ? '<span class="b">คุณตอบ: ' + esc(x.opts[x.pick].t) + '</span><br>' : '<span class="b">ไม่ได้ตอบ</span><br>') +
-          '<span class="a">เฉลย: ' + esc(x.q.a) + '</span><br><small>' + esc(x.q.why) + '</small></div>';
-      });
-      h += '</div>';
-    }
-    app.innerHTML = h;
-    window.scrollTo(0, 0);
-    document.getElementById("back").onclick = function () { S.i = 0; render(); };
-    document.getElementById("again").onclick = function () { home(); };
-  }
-
-  function notes(id) {
-    if (!id) {
-      app.innerHTML = '<div class="card"><h1>สรุปเนื้อหารายบท</h1><p>สรุปสั้นๆ จากสไลด์ทั้งหมด เลือกบทที่ต้องการ</p><div class="toc">' +
-        NOTES.map(function (n, i) { return '<a href="#notes/' + n.id + '"><b>บทที่ ' + (i + 1) + ' · ' + esc(n.title) + '</b><br><small>' + esc(n.src) + '</small></a>'; }).join("") + '</div></div>';
-      return;
-    }
-    var i = NOTES.findIndex(function (n) { return n.id === id; }); if (i < 0) return notes();
-    var n = NOTES[i], pv = NOTES[i - 1], nx = NOTES[i + 1];
-    app.innerHTML = '<div class="card nt"><div class="meta"><a href="#notes">← สารบัญ</a><span>' + esc(n.src) + '</span></div><h1>บทที่ ' + (i + 1) + ' · ' + esc(n.title) + '</h1>' + n.html +
-      '<div class="nav"><button id="np"' + (pv ? '' : ' disabled') + '>← ' + (pv ? esc(pv.title) : '') + '</button><button class="pri" id="nq">ทำข้อสอบบทนี้</button><button id="nn"' + (nx ? '' : ' disabled') + '>' + (nx ? esc(nx.title) : '') + ' →</button></div></div>';
-    document.getElementById("np").onclick = function () { location.hash = "notes/" + pv.id; };
-    document.getElementById("nn").onclick = function () { location.hash = "notes/" + nx.id; };
-    document.getElementById("nq").onclick = function () { location.hash = "exam/" + n.id; };
-  }
-  function route() {
-    var h = location.hash.replace("#", "").split("/");
-    document.getElementById("tn").className = h[0] === "notes" ? "on" : "";
-    document.getElementById("te").className = h[0] !== "notes" ? "on" : "";
-    window.scrollTo(0, 0);
-    if (h[0] === "notes") notes(h[1]); else home(h[1]);
-  }
-  window.addEventListener("hashchange", route);
-  route();
-})();
+window.SITE = { key: "iot", name: "IoT Study Guide", h1: "เรียน IoT ให้เข้าใจ แล้วฝึกคิดแบบข้อสอบ", p: "สรุปเนื้อหาทุกบทพร้อมแผนภาพ กล่อง \"ต้องจำ\" และแบบฝึกประยุกต์ที่ต้องอ่านสถานการณ์ วิเคราะห์ แล้วตอบ ทั้งเลือกตอบ เลือกหลายข้อ เติมคำ และจับคู่", order: [["rest", "var(--ch-blue)"], ["mqtt", "var(--ch-teal)"], ["amqp", "var(--ch-violet)"], ["coap", "var(--ch-orange)"], ["lora", "var(--ch-green)"], ["wifi", "var(--ch-pink)"], ["pi", "var(--ch-amber)"], ["sens", "var(--ch-indigo)"], ["ai", "var(--ch-mint)"]] };
+window.IOT = { ch: {}, reg: function (o) { this.ch[o.id] = o; } };
 </script>
+<script src="questions.js"></script>
+<script src="ch/rest.js"></script>
+<script src="ch/mqtt.js"></script>
+<script src="ch/amqp.js"></script>
+<script src="ch/coap.js"></script>
+<script src="ch/lora.js"></script>
+<script src="ch/wifi.js"></script>
+<script src="ch/pi.js"></script>
+<script src="ch/sens.js"></script>
+<script src="ch/ai.js"></script>
+<script src="diagrams.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

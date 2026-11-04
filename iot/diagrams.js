@@ -130,5 +130,5 @@
       T(540, 55, "Transport:", "b") + T(540, 75, "stdio · Streamable HTTP", "sm")), "").replace('class="dg"', 'class="dg in"'),
     "Tool = ให้ AI ลงมือทำ · Resource = ให้ AI อ่านข้อมูล · Prompt = เทมเพลตคำสั่ง");
 
-  if (window.NOTES) window.NOTES.forEach(function (n) { if (D[n.id]) n.html = D[n.id] + n.html; });
+  window.IOT_FIGS = D;
 })();

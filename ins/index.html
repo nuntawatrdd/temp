@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Systems Study Guide: สรุปรายบทและแบบฝึกประยุกต์</title>
+<meta name="description" content="สรุปเนื้อหาวิชา Introduction to Network Systems ตั้งแต่ Network Layer ถึง Physical Layer พร้อมแบบฝึกประยุกต์">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <button id="menu" class="icon" aria-label="หัวข้อ">☰</button>
+  <a class="brand" href="#home"><span class="logo" aria-hidden="true">NS</span><span><b>Network Systems</b><small>Network, TCP, Link, Physical</small></span></a>
+  <div class="search">
+    <input id="q" type="search" placeholder="ค้นหาเนื้อหา… เช่น CRC, NAT, cwnd" autocomplete="off" aria-label="ค้นหา">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <a class="icon" href="../index.html" title="หน้าหลัก Study Hub" aria-label="หน้าหลัก Study Hub">⌂</a>
+  <button id="theme" class="icon" title="สลับโหมดสว่าง/มืด" aria-label="สลับธีม">◐</button>
+</header>
+<div class="shell">
+  <nav id="side" class="side" aria-label="หัวข้อ"></nav>
+  <main id="app"></main>
+</div>
+<footer class="foot">เนื้อหาสรุปจากสไลด์วิชา Introduction to Network Systems. แบบฝึกเป็นโจทย์ประยุกต์ที่เพิ่มขึ้นเพื่อฝึกวิเคราะห์</footer>
+<script>
+window.SITE = { key: "ins", name: "Network Systems Study Guide", h1: "เข้าใจ Network ตั้งแต่ Layer 4 ลงถึง Layer 1 แล้วฝึกคิดแบบข้อสอบ", p: "สรุปเนื้อหาทุกบท กล่อง \"ต้องจำ\" และแบบฝึกประยุกต์ที่ให้วิเคราะห์ topology, trace, การคำนวณ และ troubleshooting ทั้งเลือกตอบ เลือกหลายข้อ เติมคำ และจับคู่", order: [["net", "var(--ch-blue)"], ["tcp", "var(--ch-orange)"], ["ll1", "var(--ch-teal)"], ["ll2", "var(--ch-violet)"], ["ll3", "var(--ch-green)"], ["ph1", "var(--ch-pink)"], ["ph2", "var(--ch-amber)"]] };
+window.IOT = { ch: {}, reg: function (o) { this.ch[o.id] = o; } };
+</script>
+<script src="ch/net.js"></script>
+<script src="ch/tcp.js"></script>
+<script src="ch/ll1.js"></script>
+<script src="ch/ll2.js"></script>
+<script src="ch/ll3.js"></script>
+<script src="ch/ph1.js"></script>
+<script src="ch/ph2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

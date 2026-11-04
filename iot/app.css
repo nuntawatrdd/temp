@@ -1,0 +1,6 @@
+/* Hallmark · shape: app screen · genre: editorial · theme: Editorial (deal 1/3, seed study-guide-notes-practice-2da4·a2182a95·2026-11-04·r0) · redesign: restyle
+ * nav: kept · signature: kept (chapter colour) · states: hover, focus, active, selected, disabled
+ * axes: light/display-condensed/chromatic-green · posture: restrained · contrast: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, the chapter hues are wayfinding and stay many-coloured as tokens */
+@import url("../study.css");
+:root { --c: var(--ch-teal); }
