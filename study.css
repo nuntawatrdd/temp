@@ -5,7 +5,7 @@
 @import url("./tokens.css");
 @import url("./base.css");
 
-:root { --container-app: 1360px; --side: 280px; --radius: 0; }
+:root { --container-app: 1360px; --side: 280px; --radius: 12px; }
 
 /* ---------- base for the study sites ---------- */
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
@@ -339,3 +339,23 @@ svg .t.ok { fill: var(--color-good); } svg .t.bad { fill: var(--color-bad); } sv
   .sec > .sb { padding: var(--space-xs) var(--space-md) var(--space-md); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .slide.flash { animation: none; } }
+
+
+/* ---------- soft corners ---------- */
+/* radius ladder: panels 18px, controls and inner blocks 12px, tiny marks 8px, chips and bars pill */
+.card, .ex, .sc, .tool, .cfg, .qpanel, .sb, .slide, details.dt, .howto div, .results, .dg, .kpi, .out { border-radius: var(--radius-card); }
+.sb, .ex, .sc, .tool, .cfg, .qpanel, .slide, details.dt, .card { box-shadow: var(--shadow-card); }
+.tool { overflow: clip; }
+.must, .note, div.warn, .story, .model, .log, .vote .it, .opt, .ex .opt, .opts .opt, .sc .opt, .fb, .btn, .seg, .tab, .search input, .bl select, .mt select, .mrow select, .cfg select, .fld select, .fld input, .mt .lf, .qgrid span, .tchip, .imgtoggle, .done-btn, .path button, .node, .checks label, .cfg label { border-radius: var(--radius-m); }
+.must, .note, div.warn { border-radius: var(--radius-m); }
+.side a, .toc a, .results a, .side .sub a { border-radius: var(--radius-m); }
+.side .num, .brand .logo, .sn, .ex .no .ty, .chips span, .stack, .inst i, .legend i, code { border-radius: var(--radius-s); }
+.chip, .tag, .icon, .bar, .pgbar, .bar > i, .pgbar > i, .seg button, .tab, .done-btn, .tchip, .side .ck, .toc .ck, .btn { border-radius: var(--radius-pill); }
+.icon, .side .ck, .toc .ck { border-radius: 50%; }
+.qgrid span, .path button, .node, .checks label, .cfg label, .imgtoggle { border-radius: var(--radius-m); }
+pre { border-radius: var(--radius-m); }
+.sb table, .box table, table.t { border-radius: var(--radius-m); }
+.slide img, .ex .fig svg, .dg svg { border-radius: var(--radius-m); }
+.opt .l, .qgrid .cur { border-radius: var(--radius-s); }
+details.dt > summary { border-radius: var(--radius-card); }
+@media (prefers-reduced-motion: no-preference) { .card, .btn, .tab, .opt, .icon { transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out); } }

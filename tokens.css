@@ -9,11 +9,11 @@
   --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
   --color-paper: oklch(97% 0.007 86); --color-paper-2: oklch(94% 0.010 86); --color-paper-3: oklch(91% 0.012 84);
-  --color-ink: oklch(16% 0.012 280); --color-ink-2: oklch(29% 0.011 280); --color-muted: oklch(48% 0.010 75);
+  --color-ink: oklch(22% 0.014 270); --color-ink-2: oklch(34% 0.012 270); --color-muted: oklch(48% 0.010 75);
   --color-rule: oklch(85% 0.009 85); --color-rule-2: oklch(64% 0.010 80);
   --color-accent: oklch(49% 0.130 152); --color-accent-ink: oklch(98% 0.005 88); --color-focus: oklch(52% 0.135 152);
   --font-display: "Noto Sans Thai", "Segoe UI", system-ui, sans-serif; --font-body: "Noto Sans Thai", "Segoe UI", system-ui, sans-serif; --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-heavy: 4px; --shadow-card: none;
+  --radius-s: 8px; --radius-m: 12px; --radius-card: 18px; --radius-pill: 999px; --rule-hair: 1px; --rule-heavy: 3px; --shadow-card: 0 1px 2px oklch(25% 0.02 80 / 0.06), 0 10px 28px oklch(25% 0.02 80 / 0.07);
   --tracking-display: 0; --display-weight: 700;
 }
 
@@ -35,7 +35,7 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme=light]) {
   color-scheme: dark;
   --color-paper: oklch(18% 0.014 265); --color-paper-2: oklch(22% 0.016 265); --color-paper-3: oklch(26% 0.018 265);
-  --color-ink: oklch(94% 0.008 265); --color-ink-2: oklch(86% 0.01 265); --color-muted: oklch(72% 0.014 265);
+  --color-ink: oklch(87% 0.012 75); --color-ink-2: oklch(80% 0.012 75); --color-muted: oklch(68% 0.014 75);
   --color-rule: oklch(32% 0.018 265); --color-rule-2: oklch(46% 0.02 265);
   --color-accent: oklch(76% 0.14 152); --color-accent-ink: oklch(18% 0.014 265); --color-focus: oklch(78% 0.14 152);
   --color-surface: oklch(21% 0.015 265);
@@ -43,7 +43,7 @@
   --color-bad: oklch(76% 0.15 22); --color-bad-bg: oklch(27% 0.06 22);
   --color-warn: oklch(80% 0.13 70); --color-warn-bg: oklch(28% 0.05 70);
   --color-note: oklch(78% 0.11 250); --color-note-bg: oklch(26% 0.045 250);
-  --color-code-bg: oklch(14% 0.015 265);
+  --color-code-bg: oklch(14% 0.015 265); --shadow-card: 0 1px 2px oklch(5% 0.01 265 / 0.35), 0 12px 30px oklch(5% 0.01 265 / 0.30);
   --ch-blue: oklch(76% 0.12 250); --ch-teal: oklch(79% 0.1 205); --ch-violet: oklch(76% 0.14 285);
   --ch-orange: oklch(77% 0.14 55); --ch-green: oklch(80% 0.14 148); --ch-pink: oklch(76% 0.14 5);
   --ch-amber: oklch(80% 0.13 75); --ch-indigo: oklch(74% 0.14 290); --ch-mint: oklch(79% 0.11 170);
@@ -52,7 +52,7 @@
 :root[data-theme=dark] {
   color-scheme: dark;
   --color-paper: oklch(18% 0.014 265); --color-paper-2: oklch(22% 0.016 265); --color-paper-3: oklch(26% 0.018 265);
-  --color-ink: oklch(94% 0.008 265); --color-ink-2: oklch(86% 0.01 265); --color-muted: oklch(72% 0.014 265);
+  --color-ink: oklch(87% 0.012 75); --color-ink-2: oklch(80% 0.012 75); --color-muted: oklch(68% 0.014 75);
   --color-rule: oklch(32% 0.018 265); --color-rule-2: oklch(46% 0.02 265);
   --color-accent: oklch(76% 0.14 152); --color-accent-ink: oklch(18% 0.014 265); --color-focus: oklch(78% 0.14 152);
   --color-surface: oklch(21% 0.015 265);
@@ -60,7 +60,7 @@
   --color-bad: oklch(76% 0.15 22); --color-bad-bg: oklch(27% 0.06 22);
   --color-warn: oklch(80% 0.13 70); --color-warn-bg: oklch(28% 0.05 70);
   --color-note: oklch(78% 0.11 250); --color-note-bg: oklch(26% 0.045 250);
-  --color-code-bg: oklch(14% 0.015 265);
+  --color-code-bg: oklch(14% 0.015 265); --shadow-card: 0 1px 2px oklch(5% 0.01 265 / 0.35), 0 12px 30px oklch(5% 0.01 265 / 0.30);
   --ch-blue: oklch(76% 0.12 250); --ch-teal: oklch(79% 0.1 205); --ch-violet: oklch(76% 0.14 285);
   --ch-orange: oklch(77% 0.14 55); --ch-green: oklch(80% 0.14 148); --ch-pink: oklch(76% 0.14 5);
   --ch-amber: oklch(80% 0.13 75); --ch-indigo: oklch(74% 0.14 290); --ch-mint: oklch(79% 0.11 170);
