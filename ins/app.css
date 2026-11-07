@@ -4,3 +4,5 @@
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, the chapter hues are wayfinding and stay many-coloured as tokens */
 @import url("../study.css");
 :root { --c: var(--ch-teal); }
+
+.sec h2 .ref{font:500 12px var(--mono);color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:middle}

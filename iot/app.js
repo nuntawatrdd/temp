@@ -191,13 +191,13 @@ function mustOf(c) {
 function chapter(r) {
   var c = BYID[r.id], i = CH.indexOf(c); document.title = c.title + " — " + SITE.name;
   var h = '<div class="chhead"><div class="crumb"><a href="#home">หน้าหลัก</a> › บทที่ ' + (i + 1) + "</div><h1>" + esc(c.title) + '</h1><div class="th">' + esc(c.th || "") + "</div>" +
-    '<div class="tabs"><a class="tab ' + (r.tab === "content" ? "on" : "") + '" href="#' + c.id + '">📖 เนื้อหา</a><a class="tab ' + (r.tab === "sum" ? "on" : "") + '" href="#' + c.id + '/sum">📌 สรุปทั้งหมด</a><a class="tab ' + (r.tab === "ex" ? "on" : "") + '" href="#' + c.id + '/ex">✍️ แบบฝึก<small>' + (c.ex || []).length + "</small></a></div></div>";
+    '<div class="tabs"><a class="tab ' + (r.tab === "content" ? "on" : "") + '" href="#' + c.id + '">📖 เนื้อหาทั้งหมด</a><a class="tab ' + (r.tab === "sum" ? "on" : "") + '" href="#' + c.id + '/sum">📌 สรุป</a><a class="tab ' + (r.tab === "ex" ? "on" : "") + '" href="#' + c.id + '/ex">✍️ แบบฝึก<small>' + (c.ex || []).length + "</small></a></div></div>";
   app.innerHTML = h; var box = el("div"); app.append(box);
   if (r.tab === "content") {
     (c.sections || []).forEach(function (s, k) {
       var sec = el("section", "sec"); sec.id = "sec-" + k;
       var d = (mem.done[c.id] || {})[k];
-      sec.innerHTML = "<header><h2>" + (k + 1) + ". " + esc(s.t) + '</h2><button class="done-btn ' + (d ? "on" : "") + '" type="button">' + (d ? "✓ อ่านแล้ว" : "ทำเครื่องหมายว่าอ่านแล้ว") + "</button></header>";
+      sec.innerHTML = "<header><h2>" + (k + 1) + ". " + esc(s.t) + (s.ref ? ' <small class="ref">' + esc(s.ref) + "</small>" : "") + '</h2><button class="done-btn ' + (d ? "on" : "") + '" type="button">' + (d ? "✓ อ่านแล้ว" : "ทำเครื่องหมายว่าอ่านแล้ว") + "</button></header>";
       var b = el("div", "sb", (k === 0 && FIGS[c.id] ? FIGS[c.id] : "") + s.html); sec.append(b);
       $(".done-btn", sec).onclick = function () { var m = mem.done[c.id] || (mem.done[c.id] = {}); m[k] = !m[k]; save(); this.classList.toggle("on", m[k]); this.textContent = m[k] ? "✓ อ่านแล้ว" : "ทำเครื่องหมายว่าอ่านแล้ว"; renderSide(); };
       box.append(sec);

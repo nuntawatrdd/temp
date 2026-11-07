@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIS Study Guide: สรุปรายบทและแบบฝึกประยุกต์</title>
+<meta name="description" content="สรุปเนื้อหาวิชา Management Information Systems ตั้งแต่ Network Layer ถึง Physical Layer พร้อมแบบฝึกประยุกต์">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <button id="menu" class="icon" aria-label="หัวข้อ">☰</button>
+  <a class="brand" href="#home"><span class="logo" aria-hidden="true">NS</span><span><b>Network Systems</b><small>Network, TCP, Link, Physical</small></span></a>
+  <div class="search">
+    <input id="q" type="search" placeholder="ค้นหาเนื้อหา… เช่น ERP, OLAP, churn" autocomplete="off" aria-label="ค้นหา">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <a class="icon" href="../index.html" title="หน้าหลัก Study Hub" aria-label="หน้าหลัก Study Hub">⌂</a>
+  <button id="theme" class="icon" title="สลับโหมดสว่าง/มืด" aria-label="สลับธีม">◐</button>
+</header>
+<div class="shell">
+  <nav id="side" class="side" aria-label="หัวข้อ"></nav>
+  <main id="app"></main>
+</div>
+<footer class="foot">เนื้อหาสรุปจากสไลด์วิชา Management Information Systems. แบบฝึกเป็นโจทย์ประยุกต์ที่เพิ่มขึ้นเพื่อฝึกวิเคราะห์</footer>
+<script>
+window.SITE = { key: "mis", name: "MIS Study Guide", h1: "เข้าใจ MIS ทีละสไลด์ แล้วฝึกตอบแบบ Scenario", p: "เลือกโหมด \"สรุป\" เพื่อทบทวนเร็ว หรือ \"เนื้อหาทั้งหมด\" เพื่ออ่านละเอียดตามสไลด์ พร้อมแบบทดสอบบทละ 30 ข้อเน้นสถานการณ์จริง", order: [["erp", "#1c7ed6"], ["scm", "#d9480f"], ["db", "#0b7285"], ["bi", "#7048e8"], ["dm", "#2b8a3e"], ["sdlc", "#c2255c"]] };
+window.IOT = { ch: {}, reg: function (o) { this.ch[o.id] = o; } };
+</script>
+<script src="ch/erp.js"></script>
+<script src="ch/scm.js"></script>
+<script src="ch/db.js"></script>
+<script src="ch/bi.js"></script>
+<script src="ch/dm.js"></script>
+<script src="ch/sdlc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
