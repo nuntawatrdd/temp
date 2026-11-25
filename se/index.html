@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software Engineering Study Guide: คุณภาพและการทดสอบซอฟต์แวร์</title>
+<meta name="description" content="สรุปวิชาวิศวกรรมซอฟต์แวร์ เรื่องคุณภาพ รีวิว SQA, TDD และการทดสอบ พร้อมรูปจากสไลด์และแบบฝึกประยุกต์">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <button id="menu" class="icon" aria-label="หัวข้อ">☰</button>
+  <a class="brand" href="#home"><span class="logo" aria-hidden="true">SE</span><span><b>Software Engineering</b><small>Quality, SQA, TDD, Testing</small></span></a>
+  <div class="search">
+    <input id="q" type="search" placeholder="ค้นหาเนื้อหา… เช่น MTTF, stub, cyclomatic" autocomplete="off" aria-label="ค้นหา">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <a class="icon" href="../index.html" title="หน้าหลัก Study Hub" aria-label="หน้าหลัก Study Hub">⌂</a>
+  <button id="theme" class="icon" title="สลับโหมดสว่าง/มืด" aria-label="สลับธีม">◐</button>
+</header>
+<div class="shell">
+  <nav id="side" class="side" aria-label="หัวข้อ"></nav>
+  <main id="app"></main>
+</div>
+<footer class="foot">เนื้อหาสรุปจากสไลด์วิชา Software Engineering (อ.สมเกียรติ วังศิริพิทักษ์). แบบฝึกเป็นโจทย์ประยุกต์ที่เพิ่มขึ้นเพื่อฝึกวิเคราะห์</footer>
+<script>
+window.SITE = { link: { url: "https://drive.google.com/drive/u/1/folders/1DmPqBriBXJ8c9IwRNLTOsr4-TgmpexiM", title: "เปิดโฟลเดอร์ Google Drive", note: "คลิกที่นี่ เปิดในแท็บใหม่" }, key: "se", name: "Software Engineering Study Guide", h1: "คุณภาพและการทดสอบซอฟต์แวร์ อ่านให้เข้าใจ แล้วฝึกคิดแบบข้อสอบ", p: "ตั้งแต่นิยามคุณภาพ รีวิว และ SQA ไปจนถึง TDD, กลยุทธ์การทดสอบ, white-box และ black-box พร้อมรูปจากสไลด์", order: [["c1","var(--ch-blue)"],["c2","var(--ch-teal)"],["c3","var(--ch-violet)"],["c4","var(--ch-orange)"],["c5","var(--ch-green)"]] };
+window.IOT = { ch: {}, reg: function (o) { this.ch[o.id] = o; } };
+</script>
+<script src="ch/c1.js"></script>
+<script src="ch/c2.js"></script>
+<script src="ch/c3.js"></script>
+<script src="ch/c4.js"></script>
+<script src="ch/c5.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

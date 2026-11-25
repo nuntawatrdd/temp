@@ -1,0 +1,3005 @@
+[
+{
+"page": 19,
+"file": "p019_1.webp",
+"w": 370,
+"h": 226,
+"caption": ""
+},
+{
+"page": 19,
+"file": "p019_2.webp",
+"w": 547,
+"h": 337,
+"caption": "Fig. 1.2 Illustration of internet"
+},
+{
+"page": 20,
+"file": "p020_1.webp",
+"w": 547,
+"h": 389,
+"caption": "Fig. 1.3 Illustration of the internet"
+},
+{
+"page": 20,
+"file": "p020_2.webp",
+"w": 547,
+"h": 258,
+"caption": "Fig. 1.4 Network topologies"
+},
+{
+"page": 23,
+"file": "p023_1.webp",
+"w": 547,
+"h": 407,
+"caption": "Fig. 1.5 Enterprise computer network"
+},
+{
+"page": 24,
+"file": "p024_1.webp",
+"w": 370,
+"h": 231,
+"caption": ""
+},
+{
+"page": 24,
+"file": "p024_2.webp",
+"w": 475,
+"h": 371,
+"caption": "Fig. 1.7 Router"
+},
+{
+"page": 25,
+"file": "p025_1.webp",
+"w": 475,
+"h": 418,
+"caption": "Fig. 1.8 Firewall"
+},
+{
+"page": 26,
+"file": "p026_1.webp",
+"w": 547,
+"h": 302,
+"caption": "Fig. 1.9 Access points"
+},
+{
+"page": 28,
+"file": "p028_1.webp",
+"w": 547,
+"h": 454,
+"caption": "Fig. 1.10 Layer-2 LAN"
+},
+{
+"page": 29,
+"file": "p029_1.webp",
+"w": 547,
+"h": 465,
+"caption": "Fig. 1.11 Layer 3 LAN"
+},
+{
+"page": 30,
+"file": "p030_1.webp",
+"w": 547,
+"h": 412,
+"caption": "Fig. 1.12 LAN and WAN"
+},
+{
+"page": 33,
+"file": "p033_1.webp",
+"w": 475,
+"h": 795,
+"caption": "Fig. 2.1 Lease agreement template"
+},
+{
+"page": 34,
+"file": "p034_1.webp",
+"w": 370,
+"h": 271,
+"caption": "Fig. 2.3 The detailed lease agreement"
+},
+{
+"page": 34,
+"file": "p034_2.webp",
+"w": 370,
+"h": 157,
+"caption": ""
+},
+{
+"page": 34,
+"file": "p034_3.webp",
+"w": 547,
+"h": 220,
+"caption": "Fig. 2.4 IPv4 header"
+},
+{
+"page": 35,
+"file": "p035_1.webp",
+"w": 547,
+"h": 349,
+"caption": "Fig. 2.5 TCP/IPv4 protocol stack"
+},
+{
+"page": 36,
+"file": "p036_1.webp",
+"w": 547,
+"h": 263,
+"caption": "Fig. 2.6 Express waybill"
+},
+{
+"page": 37,
+"file": "p037_1.webp",
+"w": 547,
+"h": 275,
+"caption": "Fig. 2.7 The layering and functional range of protocols"
+},
+{
+"page": 38,
+"file": "p038_1.webp",
+"w": 547,
+"h": 256,
+"caption": "Fig. 2.8 Relationships between layers"
+},
+{
+"page": 38,
+"file": "p038_2.webp",
+"w": 339,
+"h": 467,
+"caption": ""
+},
+{
+"page": 41,
+"file": "p041_1.webp",
+"w": 547,
+"h": 236,
+"caption": "Fig. 2.10 OSI reference model and TCP/IP layering"
+},
+{
+"page": 42,
+"file": "p042_1.webp",
+"w": 547,
+"h": 280,
+"caption": "Fig. 2.11 Application layer protocol"
+},
+{
+"page": 43,
+"file": "p043_1.webp",
+"w": 547,
+"h": 140,
+"caption": "Fig. 2.12 The illustration of HTTP enabling the Web browser to access the Web server"
+},
+{
+"page": 44,
+"file": "p044_1.webp",
+"w": 370,
+"h": 234,
+"caption": ""
+},
+{
+"page": 46,
+"file": "p046_1.webp",
+"w": 370,
+"h": 241,
+"caption": ""
+},
+{
+"page": 47,
+"file": "p047_1.webp",
+"w": 547,
+"h": 315,
+"caption": "Fig. 2.15 GET method of HTTP request messages"
+},
+{
+"page": 48,
+"file": "p048_1.webp",
+"w": 547,
+"h": 385,
+"caption": "Fig. 2.16 HTTP response message"
+},
+{
+"page": 49,
+"file": "p049_1.webp",
+"w": 475,
+"h": 786,
+"caption": "Fig. 2.17 POST method in HTTP"
+},
+{
+"page": 50,
+"file": "p050_1.webp",
+"w": 547,
+"h": 369,
+"caption": "Fig. 2.18 Follow stream"
+},
+{
+"page": 51,
+"file": "p051_1.webp",
+"w": 547,
+"h": 487,
+"caption": "Fig. 2.19 Interaction process of FTP client accessing FTP server"
+},
+{
+"page": 51,
+"file": "p051_2.webp",
+"w": 547,
+"h": 330,
+"caption": "Fig. 2.20 Manage FTP request ﬁltering"
+},
+{
+"page": 52,
+"file": "p052_1.webp",
+"w": 547,
+"h": 329,
+"caption": "Fig. 2.21 Disable DELE method"
+},
+{
+"page": 52,
+"file": "p052_2.webp",
+"w": 547,
+"h": 282,
+"caption": "Fig. 2.22 Command not allowed"
+},
+{
+"page": 54,
+"file": "p054_1.webp",
+"w": 547,
+"h": 287,
+"caption": "Fig. 2.23 TCP functions"
+},
+{
+"page": 57,
+"file": "p057_1.webp",
+"w": 547,
+"h": 245,
+"caption": "Fig. 2.25 Relationship between ports and services"
+},
+{
+"page": 58,
+"file": "p058_1.webp",
+"w": 547,
+"h": 316,
+"caption": "Fig. 2.26 TCP header"
+},
+{
+"page": 58,
+"file": "p058_2.webp",
+"w": 547,
+"h": 360,
+"caption": "Fig. 2.27 Understand sequence number and acknowledgement number"
+},
+{
+"page": 62,
+"file": "p062_1.webp",
+"w": 547,
+"h": 369,
+"caption": "Fig. 2.28 Establish TCP connection through three-way handshaking"
+},
+{
+"page": 63,
+"file": "p063_1.webp",
+"w": 547,
+"h": 368,
+"caption": "Fig. 2.29 The process of TCP connection release"
+},
+{
+"page": 65,
+"file": "p065_1.webp",
+"w": 547,
+"h": 180,
+"caption": "Fig. 2.30 Simpliﬁed representation of packets"
+},
+{
+"page": 65,
+"file": "p065_2.webp",
+"w": 547,
+"h": 360,
+"caption": "Fig. 2.31 The continuous ARQ protocol and sliding window protocol"
+},
+{
+"page": 67,
+"file": "p067_1.webp",
+"w": 547,
+"h": 261,
+"caption": "Fig. 2.32 TCP/IPv4 protocol stack"
+},
+{
+"page": 68,
+"file": "p068_1.webp",
+"w": 547,
+"h": 267,
+"caption": "Fig. 2.33 TCP/IPv6 protocol stack"
+},
+{
+"page": 69,
+"file": "p069_1.webp",
+"w": 547,
+"h": 230,
+"caption": "Fig. 2.34 Network layer IP packet header format"
+},
+{
+"page": 73,
+"file": "p073_1.webp",
+"w": 547,
+"h": 194,
+"caption": "Fig. 2.36 ICMP request and response messages"
+},
+{
+"page": 73,
+"file": "p073_2.webp",
+"w": 549,
+"h": 342,
+"caption": "Fig. 2.37 ICMP request message"
+},
+{
+"page": 74,
+"file": "p074_1.webp",
+"w": 549,
+"h": 466,
+"caption": "Fig. 2.38 ICMP response message"
+},
+{
+"page": 74,
+"file": "p074_2.webp",
+"w": 551,
+"h": 334,
+"caption": ""
+},
+{
+"page": 77,
+"file": "p077_1.webp",
+"w": 547,
+"h": 345,
+"caption": "Fig. 2.39 ARP request using broadcast frames"
+},
+{
+"page": 77,
+"file": "p077_2.webp",
+"w": 547,
+"h": 349,
+"caption": "Fig. 2.40 ARP response using unicast frames"
+},
+{
+"page": 78,
+"file": "p078_1.webp",
+"w": 547,
+"h": 265,
+"caption": "Fig. 2.41 The computer on the same network segment sends an ARP broadcast frame to resolve the MAC address of the target"
+},
+{
+"page": 78,
+"file": "p078_2.webp",
+"w": 547,
+"h": 283,
+"caption": "Fig. 2.42 The computer for cross-segment communication sends ARP broadcast frame to resolve the MAC address of the gatew"
+},
+{
+"page": 79,
+"file": "p079_1.webp",
+"w": 549,
+"h": 343,
+"caption": "Fig. 2.43 ARP request frame"
+},
+{
+"page": 81,
+"file": "p081_1.webp",
+"w": 547,
+"h": 209,
+"caption": "Fig. 2.44 Links and data link protocols"
+},
+{
+"page": 81,
+"file": "p081_2.webp",
+"w": 475,
+"h": 182,
+"caption": "Fig. 2.45 Add a frame header and footer to encapsulate into a frame"
+},
+{
+"page": 82,
+"file": "p082_1.webp",
+"w": 547,
+"h": 250,
+"caption": "Fig. 2.46 Solve the problem of transparent transmission by byte stufﬁng"
+},
+{
+"page": 83,
+"file": "p083_1.webp",
+"w": 475,
+"h": 140,
+"caption": "Fig. 2.47 Frame check sequence"
+},
+{
+"page": 85,
+"file": "p085_1.webp",
+"w": 547,
+"h": 234,
+"caption": "Fig. 2.48 Captured packet"
+},
+{
+"page": 86,
+"file": "p086_1.webp",
+"w": 547,
+"h": 268,
+"caption": "Fig. 2.49 Packet transport layer header"
+},
+{
+"page": 86,
+"file": "p086_2.webp",
+"w": 547,
+"h": 283,
+"caption": "Fig. 2.50 ARP broadcast"
+},
+{
+"page": 89,
+"file": "p089_1.webp",
+"w": 547,
+"h": 338,
+"caption": "Fig. 3.1 VRP application solutions"
+},
+{
+"page": 91,
+"file": "p091_1.webp",
+"w": 547,
+"h": 403,
+"caption": "Fig. 3.2 VRP command line interface"
+},
+{
+"page": 91,
+"file": "p091_2.webp",
+"w": 547,
+"h": 226,
+"caption": "Fig. 3.3 The command line views"
+},
+{
+"page": 92,
+"file": "p092_1.webp",
+"w": 551,
+"h": 207,
+"caption": ""
+},
+{
+"page": 94,
+"file": "p094_1.webp",
+"w": 551,
+"h": 263,
+"caption": ""
+},
+{
+"page": 96,
+"file": "p096_1.webp",
+"w": 551,
+"h": 203,
+"caption": ""
+},
+{
+"page": 100,
+"file": "p100_1.webp",
+"w": 370,
+"h": 241,
+"caption": ""
+},
+{
+"page": 101,
+"file": "p101_1.webp",
+"w": 547,
+"h": 384,
+"caption": "Fig. 3.5 View the COM3 port that the USB port acts as"
+},
+{
+"page": 101,
+"file": "p101_2.webp",
+"w": 547,
+"h": 418,
+"caption": "Fig. 3.6 Select a protocol"
+},
+{
+"page": 102,
+"file": "p102_1.webp",
+"w": 547,
+"h": 421,
+"caption": "Fig. 3.7 Select “COM3” port"
+},
+{
+"page": 105,
+"file": "p105_1.webp",
+"w": 370,
+"h": 132,
+"caption": ""
+},
+{
+"page": 106,
+"file": "p106_1.webp",
+"w": 547,
+"h": 512,
+"caption": "Fig. 3.9 Login to the router via Telnet on Windows"
+},
+{
+"page": 108,
+"file": "p108_1.webp",
+"w": 547,
+"h": 418,
+"caption": "Fig. 3.10 Select a protocol"
+},
+{
+"page": 109,
+"file": "p109_1.webp",
+"w": 547,
+"h": 418,
+"caption": "Fig. 3.11 Enter the hostname, port and username of the router"
+},
+{
+"page": 109,
+"file": "p109_2.webp",
+"w": 370,
+"h": 201,
+"caption": ""
+},
+{
+"page": 110,
+"file": "p110_1.webp",
+"w": 547,
+"h": 418,
+"caption": "Fig. 3.13 Login to the router via SSH"
+},
+{
+"page": 111,
+"file": "p111_1.webp",
+"w": 547,
+"h": 271,
+"caption": "Fig. 3.14 Login interface"
+},
+{
+"page": 113,
+"file": "p113_1.webp",
+"w": 547,
+"h": 256,
+"caption": "Fig. 3.15 Physical network segments and logical network segments"
+},
+{
+"page": 128,
+"file": "p128_1.webp",
+"w": 551,
+"h": 190,
+"caption": ""
+},
+{
+"page": 129,
+"file": "p129_1.webp",
+"w": 547,
+"h": 176,
+"caption": "Fig. 4.1 Correlation between binary numbers and decimal numbers"
+},
+{
+"page": 129,
+"file": "p129_2.webp",
+"w": 551,
+"h": 269,
+"caption": ""
+},
+{
+"page": 130,
+"file": "p130_1.webp",
+"w": 551,
+"h": 170,
+"caption": ""
+},
+{
+"page": 131,
+"file": "p131_1.webp",
+"w": 547,
+"h": 187,
+"caption": "Fig. 4.2 The role of MAC addresses and IP addresses"
+},
+{
+"page": 132,
+"file": "p132_1.webp",
+"w": 547,
+"h": 392,
+"caption": "Fig. 4.3 Area codes"
+},
+{
+"page": 133,
+"file": "p133_1.webp",
+"w": 547,
+"h": 303,
+"caption": "Fig. 4.4 Network IDs, host IDs and gateways"
+},
+{
+"page": 134,
+"file": "p134_1.webp",
+"w": 475,
+"h": 560,
+"caption": "Fig. 4.5 The dotted decimal notation"
+},
+{
+"page": 136,
+"file": "p136_1.webp",
+"w": 475,
+"h": 560,
+"caption": "Fig. 4.6 The function of subnet mask (1)"
+},
+{
+"page": 137,
+"file": "p137_1.webp",
+"w": 475,
+"h": 560,
+"caption": "Fig. 4.7 The function of subnet mask (2)"
+},
+{
+"page": 138,
+"file": "p138_1.webp",
+"w": 475,
+"h": 560,
+"caption": "Fig. 4.8 The function of subnet mask (3)"
+},
+{
+"page": 138,
+"file": "p138_2.webp",
+"w": 547,
+"h": 187,
+"caption": "Fig. 4.9 The function of subnet mask (4)"
+},
+{
+"page": 139,
+"file": "p139_1.webp",
+"w": 547,
+"h": 168,
+"caption": "Fig. 4.10 The function of subnet masks and gateways"
+},
+{
+"page": 139,
+"file": "p139_2.webp",
+"w": 370,
+"h": 210,
+"caption": "Fig. 4.12 Different subnet mask settings (2)"
+},
+{
+"page": 139,
+"file": "p139_3.webp",
+"w": 370,
+"h": 154,
+"caption": ""
+},
+{
+"page": 140,
+"file": "p140_1.webp",
+"w": 429,
+"h": 137,
+"caption": "Fig. 4.13 Network ID and host ID of Class A address"
+},
+{
+"page": 141,
+"file": "p141_1.webp",
+"w": 429,
+"h": 147,
+"caption": "Fig. 4.14 Network ID and host ID of Class B address"
+},
+{
+"page": 141,
+"file": "p141_2.webp",
+"w": 429,
+"h": 142,
+"caption": "Fig. 4.15 Network ID and host ID of Class C address"
+},
+{
+"page": 142,
+"file": "p142_1.webp",
+"w": 547,
+"h": 234,
+"caption": "Fig. 4.18 A chart to help remember IP address classiﬁcation"
+},
+{
+"page": 144,
+"file": "p144_1.webp",
+"w": 429,
+"h": 512,
+"caption": "Fig. 4.19 Obtain address automatically"
+},
+{
+"page": 145,
+"file": "p145_1.webp",
+"w": 547,
+"h": 353,
+"caption": "Fig. 4.20 IP address automatically conﬁgured by Windows"
+},
+{
+"page": 145,
+"file": "p145_2.webp",
+"w": 547,
+"h": 360,
+"caption": "Fig. 4.21 Address conﬂict"
+},
+{
+"page": 146,
+"file": "p146_1.webp",
+"w": 547,
+"h": 358,
+"caption": "Fig. 4.22 View the carrier and location of the IP address"
+},
+{
+"page": 147,
+"file": "p147_1.webp",
+"w": 547,
+"h": 187,
+"caption": "Fig. 4.23 Address waste"
+},
+{
+"page": 148,
+"file": "p148_1.webp",
+"w": 547,
+"h": 224,
+"caption": "Fig. 4.24 The situation of a network segment"
+},
+{
+"page": 149,
+"file": "p149_1.webp",
+"w": 547,
+"h": 244,
+"caption": "Fig. 4.25 Equally divide the network into two subnets"
+},
+{
+"page": 149,
+"file": "p149_2.webp",
+"w": 370,
+"h": 104,
+"caption": ""
+},
+{
+"page": 150,
+"file": "p150_1.webp",
+"w": 547,
+"h": 301,
+"caption": "Fig. 4.27 The address planning after subnetting"
+},
+{
+"page": 150,
+"file": "p150_2.webp",
+"w": 547,
+"h": 275,
+"caption": "Fig. 4.28 Equally divide the network into four subnets"
+},
+{
+"page": 151,
+"file": "p151_1.webp",
+"w": 429,
+"h": 290,
+"caption": "Fig. 4.29 Network part and host part"
+},
+{
+"page": 151,
+"file": "p151_2.webp",
+"w": 547,
+"h": 269,
+"caption": "Fig. 4.30 Equally divide the network into eight subnets"
+},
+{
+"page": 152,
+"file": "p152_1.webp",
+"w": 551,
+"h": 104,
+"caption": ""
+},
+{
+"page": 152,
+"file": "p152_2.webp",
+"w": 429,
+"h": 206,
+"caption": "Fig. 4.31 Subnetting of Class B network"
+},
+{
+"page": 153,
+"file": "p153_1.webp",
+"w": 547,
+"h": 170,
+"caption": "Fig. 4.32 Address range of Subnet A"
+},
+{
+"page": 153,
+"file": "p153_2.webp",
+"w": 547,
+"h": 171,
+"caption": "Fig. 4.33 Address range of Subnet B"
+},
+{
+"page": 154,
+"file": "p154_1.webp",
+"w": 547,
+"h": 383,
+"caption": "Fig. 4.34 VLSM subnetting"
+},
+{
+"page": 155,
+"file": "p155_1.webp",
+"w": 429,
+"h": 200,
+"caption": "Fig. 4.37 Broadcast address"
+},
+{
+"page": 155,
+"file": "p155_2.webp",
+"w": 429,
+"h": 197,
+"caption": "Fig. 4.38 Broadcast address"
+},
+{
+"page": 157,
+"file": "p157_1.webp",
+"w": 547,
+"h": 294,
+"caption": "Fig. 4.39 Addresses of two network segments"
+},
+{
+"page": 157,
+"file": "p157_2.webp",
+"w": 429,
+"h": 204,
+"caption": "Fig. 4.40 Merge two subnets"
+},
+{
+"page": 158,
+"file": "p158_1.webp",
+"w": 547,
+"h": 293,
+"caption": "Fig. 4.41 The address assignment after the merge"
+},
+{
+"page": 159,
+"file": "p159_1.webp",
+"w": 429,
+"h": 201,
+"caption": "Fig. 4.43 The rule of merging network segments (1)"
+},
+{
+"page": 159,
+"file": "p159_2.webp",
+"w": 429,
+"h": 238,
+"caption": "Fig. 4.44 The rule of merging network segments (2)"
+},
+{
+"page": 159,
+"file": "p159_3.webp",
+"w": 429,
+"h": 142,
+"caption": "Fig. 4.45 Merge 192.168.0.0/24 and 192.168.1.0/24"
+},
+{
+"page": 159,
+"file": "p159_4.webp",
+"w": 429,
+"h": 135,
+"caption": "Fig. 4.46 Merge 192.168.2.0/24 and 192.168.3.0/24"
+},
+{
+"page": 160,
+"file": "p160_1.webp",
+"w": 429,
+"h": 223,
+"caption": "Fig. 4.47 Merge four network segments 1"
+},
+{
+"page": 161,
+"file": "p161_1.webp",
+"w": 429,
+"h": 218,
+"caption": "Fig. 4.48 Merge four network segments 2"
+},
+{
+"page": 161,
+"file": "p161_2.webp",
+"w": 370,
+"h": 192,
+"caption": ""
+},
+{
+"page": 162,
+"file": "p162_1.webp",
+"w": 370,
+"h": 188,
+"caption": ""
+},
+{
+"page": 164,
+"file": "p164_1.webp",
+"w": 370,
+"h": 274,
+"caption": ""
+},
+{
+"page": 166,
+"file": "p166_1.webp",
+"w": 370,
+"h": 174,
+"caption": ""
+},
+{
+"page": 166,
+"file": "p166_2.webp",
+"w": 547,
+"h": 180,
+"caption": "Fig. 4.54 Illustration of the communication between Computer A and Computer D"
+},
+{
+"page": 167,
+"file": "p167_1.webp",
+"w": 547,
+"h": 299,
+"caption": "Fig. 4.55 Network topology"
+},
+{
+"page": 167,
+"file": "p167_2.webp",
+"w": 547,
+"h": 310,
+"caption": "Fig. 4.56 Network planning"
+},
+{
+"page": 169,
+"file": "p169_1.webp",
+"w": 547,
+"h": 268,
+"caption": "Fig. 5.1 IP routing"
+},
+{
+"page": 171,
+"file": "p171_1.webp",
+"w": 547,
+"h": 222,
+"caption": "Fig. 5.2 Direct routes"
+},
+{
+"page": 172,
+"file": "p172_1.webp",
+"w": 547,
+"h": 241,
+"caption": "Fig. 5.3 Conﬁgure static routes"
+},
+{
+"page": 172,
+"file": "p172_2.webp",
+"w": 547,
+"h": 259,
+"caption": "Fig. 5.4 Dynamic route preference"
+},
+{
+"page": 174,
+"file": "p174_1.webp",
+"w": 374,
+"h": 150,
+"caption": ""
+},
+{
+"page": 174,
+"file": "p174_2.webp",
+"w": 547,
+"h": 231,
+"caption": "Fig. 5.5 RIP protocol uses “hop count” as the cost of the route"
+},
+{
+"page": 175,
+"file": "p175_1.webp",
+"w": 547,
+"h": 241,
+"caption": "Fig. 5.6 Equal-cost routes"
+},
+{
+"page": 176,
+"file": "p176_1.webp",
+"w": 547,
+"h": 219,
+"caption": "Fig. 5.7 Conditions for an unobstructed network"
+},
+{
+"page": 177,
+"file": "p177_1.webp",
+"w": 547,
+"h": 243,
+"caption": "Fig. 5.8 Commands for adding static routes"
+},
+{
+"page": 178,
+"file": "p178_1.webp",
+"w": 547,
+"h": 200,
+"caption": "Fig. 5.9 Conﬁgure exit information for point to point link routing"
+},
+{
+"page": 178,
+"file": "p178_2.webp",
+"w": 547,
+"h": 380,
+"caption": "Fig. 5.10 It is suggested to add the next hop address for Ethernet interface"
+},
+{
+"page": 179,
+"file": "p179_1.webp",
+"w": 547,
+"h": 146,
+"caption": "Fig. 5.11 Static routing network topology"
+},
+{
+"page": 181,
+"file": "p181_1.webp",
+"w": 547,
+"h": 158,
+"caption": "Fig. 5.12 Alternate path"
+},
+{
+"page": 184,
+"file": "p184_1.webp",
+"w": 547,
+"h": 319,
+"caption": "Fig. 5.13 Address planning"
+},
+{
+"page": 185,
+"file": "p185_1.webp",
+"w": 547,
+"h": 305,
+"caption": "Fig. 5.14 Route summarization can be performed after address planning"
+},
+{
+"page": 185,
+"file": "p185_2.webp",
+"w": 547,
+"h": 305,
+"caption": "Fig. 5.15 Route summarization"
+},
+{
+"page": 186,
+"file": "p186_1.webp",
+"w": 547,
+"h": 252,
+"caption": "Fig. 5.16 Route summarization exception"
+},
+{
+"page": 188,
+"file": "p188_1.webp",
+"w": 547,
+"h": 317,
+"caption": "Fig. 5.17 Simplify routing table using CIDR"
+},
+{
+"page": 190,
+"file": "p190_1.webp",
+"w": 547,
+"h": 417,
+"caption": "Fig. 5.18 Simplify routing tables by default route"
+},
+{
+"page": 191,
+"file": "p191_1.webp",
+"w": 547,
+"h": 391,
+"caption": "Fig. 5.19 Route summarization of routers and simplify routing table by default routing"
+},
+{
+"page": 192,
+"file": "p192_1.webp",
+"w": 547,
+"h": 442,
+"caption": "Fig. 5.20 Internet address planning illustration"
+},
+{
+"page": 193,
+"file": "p193_1.webp",
+"w": 547,
+"h": 396,
+"caption": "Fig. 5.21 Simplify routing by route summarization and default routing"
+},
+{
+"page": 193,
+"file": "p193_2.webp",
+"w": 547,
+"h": 383,
+"caption": "Fig. 5.22 Ring network using default routes"
+},
+{
+"page": 194,
+"file": "p194_1.webp",
+"w": 547,
+"h": 401,
+"caption": "Fig. 5.23 Packet round trip path"
+},
+{
+"page": 195,
+"file": "p195_1.webp",
+"w": 547,
+"h": 218,
+"caption": "Fig. 5.24 Problems arising from default routing"
+},
+{
+"page": 196,
+"file": "p196_1.webp",
+"w": 547,
+"h": 313,
+"caption": "Fig. 5.25 A gateway equals a default route."
+},
+{
+"page": 196,
+"file": "p196_2.webp",
+"w": 547,
+"h": 446,
+"caption": "Fig. 5.26 View the routing table"
+},
+{
+"page": 198,
+"file": "p198_1.webp",
+"w": 547,
+"h": 480,
+"caption": "Fig. 5.27 Add a default route"
+},
+{
+"page": 198,
+"file": "p198_2.webp",
+"w": 547,
+"h": 194,
+"caption": "Fig. 5.28 A static route needs to be added."
+},
+{
+"page": 199,
+"file": "p199_1.webp",
+"w": 547,
+"h": 198,
+"caption": "Fig. 5.29 Add a static route and a default route"
+},
+{
+"page": 200,
+"file": "p200_1.webp",
+"w": 370,
+"h": 172,
+"caption": ""
+},
+{
+"page": 201,
+"file": "p201_1.webp",
+"w": 547,
+"h": 182,
+"caption": "Fig. 5.31 Example network (2)"
+},
+{
+"page": 201,
+"file": "p201_2.webp",
+"w": 547,
+"h": 265,
+"caption": "Fig. 5.32 Example network (3)"
+},
+{
+"page": 202,
+"file": "p202_1.webp",
+"w": 370,
+"h": 339,
+"caption": ""
+},
+{
+"page": 204,
+"file": "p204_1.webp",
+"w": 547,
+"h": 327,
+"caption": "Fig. 5.34 Head ofﬁce network and branch ofﬁce network"
+},
+{
+"page": 209,
+"file": "p209_1.webp",
+"w": 547,
+"h": 335,
+"caption": "Fig. 6.1 Network topology generated from the link state database"
+},
+{
+"page": 210,
+"file": "p210_1.webp",
+"w": 547,
+"h": 326,
+"caption": "Fig. 6.2 Shortest path tree of Router RA"
+},
+{
+"page": 211,
+"file": "p211_1.webp",
+"w": 547,
+"h": 335,
+"caption": "Fig. 6.3 Shortest path tree of Router RH"
+},
+{
+"page": 211,
+"file": "p211_2.webp",
+"w": 547,
+"h": 348,
+"caption": "Fig. 6.4 Generate a routing table"
+},
+{
+"page": 212,
+"file": "p212_1.webp",
+"w": 547,
+"h": 162,
+"caption": "Fig. 6.5 Interface cost and cumulative cost"
+},
+{
+"page": 214,
+"file": "p214_1.webp",
+"w": 547,
+"h": 469,
+"caption": "Fig. 6.6 Working process of OSPF protocol"
+},
+{
+"page": 216,
+"file": "p216_1.webp",
+"w": 547,
+"h": 207,
+"caption": "Fig. 6.7 P2P and broadcast networks"
+},
+{
+"page": 216,
+"file": "p216_2.webp",
+"w": 547,
+"h": 204,
+"caption": "Fig. 6.8 NBMA and P2MP"
+},
+{
+"page": 217,
+"file": "p217_1.webp",
+"w": 547,
+"h": 226,
+"caption": "Fig. 6.9 Multi-access network neighbor relationship"
+},
+{
+"page": 218,
+"file": "p218_1.webp",
+"w": 547,
+"h": 241,
+"caption": "Fig. 6.10 Neighbor relationship"
+},
+{
+"page": 220,
+"file": "p220_1.webp",
+"w": 547,
+"h": 367,
+"caption": "Fig. 6.12 Autonomous system and OSPF areas"
+},
+{
+"page": 221,
+"file": "p221_1.webp",
+"w": 547,
+"h": 188,
+"caption": "Fig. 6.13 Conﬁgure network topology for OSPF protocol"
+},
+{
+"page": 225,
+"file": "p225_1.webp",
+"w": 547,
+"h": 483,
+"caption": "Fig. 6.14 Multi-area OSPF network topology"
+},
+{
+"page": 231,
+"file": "p231_1.webp",
+"w": 547,
+"h": 222,
+"caption": "Fig. 6.15 Network topology"
+},
+{
+"page": 235,
+"file": "p235_1.webp",
+"w": 547,
+"h": 283,
+"caption": "Fig. 7.1 Bus Ethernet"
+},
+{
+"page": 235,
+"file": "p235_2.webp",
+"w": 370,
+"h": 196,
+"caption": ""
+},
+{
+"page": 236,
+"file": "p236_1.webp",
+"w": 429,
+"h": 330,
+"caption": "Fig. 7.3 Advantages of switch networking"
+},
+{
+"page": 238,
+"file": "p238_1.webp",
+"w": 547,
+"h": 308,
+"caption": "Fig. 7.4 Broadcast domain and collision domain"
+},
+{
+"page": 239,
+"file": "p239_1.webp",
+"w": 547,
+"h": 309,
+"caption": "Fig. 7.6 MAC address classiﬁcation and format"
+},
+{
+"page": 240,
+"file": "p240_1.webp",
+"w": 547,
+"h": 184,
+"caption": "Fig. 7.7 MAC address representation"
+},
+{
+"page": 240,
+"file": "p240_2.webp",
+"w": 547,
+"h": 240,
+"caption": "Fig. 7.8 IEEE 802.3 format"
+},
+{
+"page": 240,
+"file": "p240_3.webp",
+"w": 547,
+"h": 302,
+"caption": "Fig. 7.9 Ethernet II format"
+},
+{
+"page": 242,
+"file": "p242_1.webp",
+"w": 547,
+"h": 277,
+"caption": "Fig. 7.10 View MAC address table"
+},
+{
+"page": 244,
+"file": "p244_1.webp",
+"w": 547,
+"h": 493,
+"caption": "Fig. 7.11 Three frame forwarding actions of the switch"
+},
+{
+"page": 245,
+"file": "p245_1.webp",
+"w": 547,
+"h": 372,
+"caption": "Fig. 7.12 The MAC address table building process of a switch"
+},
+{
+"page": 246,
+"file": "p246_1.webp",
+"w": 547,
+"h": 373,
+"caption": "Fig. 7.13 Flooding"
+},
+{
+"page": 246,
+"file": "p246_2.webp",
+"w": 547,
+"h": 377,
+"caption": "Fig. 7.14 Forwarding according to the MAC address table"
+},
+{
+"page": 247,
+"file": "p247_1.webp",
+"w": 547,
+"h": 410,
+"caption": "Fig. 7.15 PC3 sends a broadcast frame"
+},
+{
+"page": 248,
+"file": "p248_1.webp",
+"w": 547,
+"h": 298,
+"caption": "Fig. 7.16 Multi-switch networking"
+},
+{
+"page": 249,
+"file": "p249_1.webp",
+"w": 547,
+"h": 298,
+"caption": "Fig. 7.17 PC1 sends a unicast frame to PC3"
+},
+{
+"page": 249,
+"file": "p249_2.webp",
+"w": 547,
+"h": 294,
+"caption": "Fig. 7.18 PC4 sends a unicast frame to PC1"
+},
+{
+"page": 250,
+"file": "p250_1.webp",
+"w": 547,
+"h": 298,
+"caption": "Fig. 7.19 PC2 sends a unicast frame to PC1"
+},
+{
+"page": 250,
+"file": "p250_2.webp",
+"w": 547,
+"h": 292,
+"caption": "Fig. 7.20 PC3 sends a broadcast frame"
+},
+{
+"page": 251,
+"file": "p251_1.webp",
+"w": 547,
+"h": 422,
+"caption": "Fig. 7.21 Typical campus network architecture"
+},
+{
+"page": 252,
+"file": "p252_1.webp",
+"w": 547,
+"h": 417,
+"caption": "Fig. 7.22 VLAN illustration"
+},
+{
+"page": 253,
+"file": "p253_1.webp",
+"w": 547,
+"h": 244,
+"caption": "Fig. 7.23 Switch port belongs to VLAN 1 by default"
+},
+{
+"page": 254,
+"file": "p254_1.webp",
+"w": 547,
+"h": 292,
+"caption": "Fig. 7.24 Same VLAN communication process of the switch"
+},
+{
+"page": 254,
+"file": "p254_2.webp",
+"w": 547,
+"h": 271,
+"caption": "Fig. 7.25 VLAN equivalence diagram"
+},
+{
+"page": 255,
+"file": "p255_1.webp",
+"w": 547,
+"h": 356,
+"caption": "Fig. 7.26 Cross-switch VLAN"
+},
+{
+"page": 256,
+"file": "p256_1.webp",
+"w": 547,
+"h": 331,
+"caption": "Fig. 7.27 Trunk link frames with VLAN tags"
+},
+{
+"page": 257,
+"file": "p257_1.webp",
+"w": 547,
+"h": 347,
+"caption": "Fig. 7.28 Do not use access port to connect switches"
+},
+{
+"page": 261,
+"file": "p261_1.webp",
+"w": 547,
+"h": 363,
+"caption": "Fig. 7.29 Cross-switch VLAN"
+},
+{
+"page": 265,
+"file": "p265_1.webp",
+"w": 547,
+"h": 391,
+"caption": "Fig. 7.30 Tagged VLAN frame structure"
+},
+{
+"page": 266,
+"file": "p266_1.webp",
+"w": 547,
+"h": 201,
+"caption": "Fig. 7.31 MAC address-based VLAN"
+},
+{
+"page": 268,
+"file": "p268_1.webp",
+"w": 547,
+"h": 367,
+"caption": "Fig. 7.32 Implement inter-VLAN routing with a multi-armed router"
+},
+{
+"page": 269,
+"file": "p269_1.webp",
+"w": 547,
+"h": 349,
+"caption": "Fig. 7.33 Implement inter-VLAN routing with a one-armed router"
+},
+{
+"page": 270,
+"file": "p270_1.webp",
+"w": 547,
+"h": 428,
+"caption": "Fig. 7.34 Implement inter-VLAN routing by using a one-armed router"
+},
+{
+"page": 272,
+"file": "p272_1.webp",
+"w": 547,
+"h": 343,
+"caption": "Fig. 7.35 Layer 3 switch equivalence diagram"
+},
+{
+"page": 273,
+"file": "p273_1.webp",
+"w": 370,
+"h": 144,
+"caption": ""
+},
+{
+"page": 274,
+"file": "p274_1.webp",
+"w": 370,
+"h": 162,
+"caption": ""
+},
+{
+"page": 275,
+"file": "p275_1.webp",
+"w": 370,
+"h": 205,
+"caption": ""
+},
+{
+"page": 279,
+"file": "p279_1.webp",
+"w": 293,
+"h": 367,
+"caption": ""
+},
+{
+"page": 279,
+"file": "p279_2.webp",
+"w": 547,
+"h": 439,
+"caption": "Fig. 8.2 Dual aggregation layer network"
+},
+{
+"page": 282,
+"file": "p282_1.webp",
+"w": 429,
+"h": 162,
+"caption": "Fig. 8.3 BID composition"
+},
+{
+"page": 282,
+"file": "p282_2.webp",
+"w": 547,
+"h": 141,
+"caption": "Fig. 8.4 PID composition"
+},
+{
+"page": 283,
+"file": "p283_1.webp",
+"w": 547,
+"h": 429,
+"caption": "Fig. 8.5 Working process of Spanning Tree Protocol"
+},
+{
+"page": 285,
+"file": "p285_1.webp",
+"w": 374,
+"h": 113,
+"caption": ""
+},
+{
+"page": 285,
+"file": "p285_2.webp",
+"w": 547,
+"h": 244,
+"caption": "Fig. 8.6 Determine the root port"
+},
+{
+"page": 286,
+"file": "p286_1.webp",
+"w": 547,
+"h": 270,
+"caption": "Fig. 8.7 Determine the designated port"
+},
+{
+"page": 288,
+"file": "p288_1.webp",
+"w": 547,
+"h": 217,
+"caption": "Fig. 8.8 Network topology change advertisement process"
+},
+{
+"page": 289,
+"file": "p289_1.webp",
+"w": 547,
+"h": 407,
+"caption": "Fig. 8.9 Spanning tree experimental network topology"
+},
+{
+"page": 294,
+"file": "p294_1.webp",
+"w": 547,
+"h": 357,
+"caption": "Fig. 8.10 Block a port of one of the links of the multi-uplink STP"
+},
+{
+"page": 294,
+"file": "p294_2.webp",
+"w": 547,
+"h": 329,
+"caption": "Fig. 8.11 Link aggregation"
+},
+{
+"page": 295,
+"file": "p295_1.webp",
+"w": 547,
+"h": 354,
+"caption": "Fig. 8.12 Application scenarios of link aggregation technology"
+},
+{
+"page": 296,
+"file": "p296_1.webp",
+"w": 547,
+"h": 288,
+"caption": "Fig. 8.13 The process of sending and receiving frames on an aggregation link"
+},
+{
+"page": 296,
+"file": "p296_2.webp",
+"w": 547,
+"h": 297,
+"caption": "Fig. 8.14 Harmful disorder"
+},
+{
+"page": 297,
+"file": "p297_1.webp",
+"w": 547,
+"h": 306,
+"caption": "Fig. 8.15 Harmless disorder"
+},
+{
+"page": 298,
+"file": "p298_1.webp",
+"w": 429,
+"h": 144,
+"caption": "Fig. 8.16 In manual mode, whether the port is working properly can only be determined by its physical state"
+},
+{
+"page": 298,
+"file": "p298_2.webp",
+"w": 429,
+"h": 241,
+"caption": "Fig. 8.17 In manual mode, Eth-trunk error connection results in abnormal communication"
+},
+{
+"page": 300,
+"file": "p300_1.webp",
+"w": 547,
+"h": 297,
+"caption": "Fig. 8.18 Load-balance mode based on source MAC address and destination MAC address"
+},
+{
+"page": 300,
+"file": "p300_2.webp",
+"w": 547,
+"h": 451,
+"caption": "Figures 8.18 and 8.19 are similar, and both have Area A. Computers in Area A need to access the Internet through the lin"
+},
+{
+"page": 301,
+"file": "p301_1.webp",
+"w": 429,
+"h": 247,
+"caption": "Fig. 8.20 Eth-Trunk conﬁguration illustration"
+},
+{
+"page": 303,
+"file": "p303_1.webp",
+"w": 547,
+"h": 446,
+"caption": "Fig. 8.21 Eliminate working loops using STP"
+},
+{
+"page": 304,
+"file": "p304_1.webp",
+"w": 293,
+"h": 407,
+"caption": ""
+},
+{
+"page": 305,
+"file": "p305_1.webp",
+"w": 370,
+"h": 415,
+"caption": ""
+},
+{
+"page": 306,
+"file": "p306_1.webp",
+"w": 370,
+"h": 410,
+"caption": ""
+},
+{
+"page": 307,
+"file": "p307_1.webp",
+"w": 370,
+"h": 498,
+"caption": "Fig. 8.26 Return to moment t + 5 s"
+},
+{
+"page": 307,
+"file": "p307_2.webp",
+"w": 370,
+"h": 372,
+"caption": ""
+},
+{
+"page": 308,
+"file": "p308_1.webp",
+"w": 370,
+"h": 393,
+"caption": ""
+},
+{
+"page": 310,
+"file": "p310_1.webp",
+"w": 339,
+"h": 464,
+"caption": ""
+},
+{
+"page": 312,
+"file": "p312_1.webp",
+"w": 547,
+"h": 401,
+"caption": "Fig. 8.29 Basic principle of Monitor Link"
+},
+{
+"page": 313,
+"file": "p313_1.webp",
+"w": 547,
+"h": 441,
+"caption": "Fig. 8.30 Monitor Link and Smart Link in a complex situation"
+},
+{
+"page": 315,
+"file": "p315_1.webp",
+"w": 547,
+"h": 460,
+"caption": "Fig. 8.31 Monitor Link conﬁguration illustration"
+},
+{
+"page": 321,
+"file": "p321_1.webp",
+"w": 547,
+"h": 366,
+"caption": "Fig. 9.1 Composition of ACL"
+},
+{
+"page": 323,
+"file": "p323_1.webp",
+"w": 547,
+"h": 150,
+"caption": "Fig. 9.2 Wildcard-mask"
+},
+{
+"page": 325,
+"file": "p325_1.webp",
+"w": 547,
+"h": 286,
+"caption": "Fig. 9.3 The 0s and 1s in wildcard-mask can be discontinuous"
+},
+{
+"page": 326,
+"file": "p326_1.webp",
+"w": 547,
+"h": 394,
+"caption": "Fig. 9.4 ACL example"
+},
+{
+"page": 327,
+"file": "p327_1.webp",
+"w": 547,
+"h": 340,
+"caption": "Fig. 9.5 Enterprise network"
+},
+{
+"page": 330,
+"file": "p330_1.webp",
+"w": 547,
+"h": 340,
+"caption": "Fig. 9.6 Application of advanced ACL"
+},
+{
+"page": 332,
+"file": "p332_1.webp",
+"w": 547,
+"h": 324,
+"caption": "Fig. 9.7 Illustration of how local AAA works"
+},
+{
+"page": 333,
+"file": "p333_1.webp",
+"w": 547,
+"h": 302,
+"caption": "Fig. 9.8 Illustration of how AAA works using an AAA server"
+},
+{
+"page": 336,
+"file": "p336_1.webp",
+"w": 547,
+"h": 386,
+"caption": "Fig. 9.10 Login test using user1"
+},
+{
+"page": 337,
+"file": "p337_1.webp",
+"w": 547,
+"h": 461,
+"caption": "Fig. 9.11 Login test with user2"
+},
+{
+"page": 340,
+"file": "p340_1.webp",
+"w": 429,
+"h": 179,
+"caption": "Fig. 9.13 Question 6"
+},
+{
+"page": 341,
+"file": "p341_1.webp",
+"w": 429,
+"h": 279,
+"caption": "Fig. 9.14 Topology"
+},
+{
+"page": 343,
+"file": "p343_1.webp",
+"w": 294,
+"h": 195,
+"caption": ""
+},
+{
+"page": 345,
+"file": "p345_1.webp",
+"w": 547,
+"h": 292,
+"caption": "Fig. 10.2 Static NAT illustration"
+},
+{
+"page": 346,
+"file": "p346_1.webp",
+"w": 547,
+"h": 274,
+"caption": "Fig. 10.3 Dynamic NAT"
+},
+{
+"page": 347,
+"file": "p347_1.webp",
+"w": 547,
+"h": 368,
+"caption": "Fig. 10.4 Illustration of network address port translation"
+},
+{
+"page": 348,
+"file": "p348_1.webp",
+"w": 547,
+"h": 316,
+"caption": "Fig. 10.5 Easy IP"
+},
+{
+"page": 348,
+"file": "p348_2.webp",
+"w": 547,
+"h": 215,
+"caption": "Fig. 10.6 Conﬁgure static NAT"
+},
+{
+"page": 351,
+"file": "p351_1.webp",
+"w": 547,
+"h": 216,
+"caption": "Fig. 10.7 Use an extranet interface address for NAPT"
+},
+{
+"page": 352,
+"file": "p352_1.webp",
+"w": 547,
+"h": 226,
+"caption": "Fig. 10.8 NAT server"
+},
+{
+"page": 353,
+"file": "p353_1.webp",
+"w": 547,
+"h": 234,
+"caption": "Fig. 10.9 Conﬁgure NAT server"
+},
+{
+"page": 355,
+"file": "p355_1.webp",
+"w": 547,
+"h": 190,
+"caption": "Fig. 10.10 Communication illustration (1)"
+},
+{
+"page": 355,
+"file": "p355_2.webp",
+"w": 547,
+"h": 246,
+"caption": "Fig. 10.11 Communication illustration (2)"
+},
+{
+"page": 357,
+"file": "p357_1.webp",
+"w": 547,
+"h": 220,
+"caption": "Fig. 10.12 Static NAT conﬁguration"
+},
+{
+"page": 360,
+"file": "p360_1.webp",
+"w": 429,
+"h": 270,
+"caption": "Fig. 11.1 DHCP working illustration"
+},
+{
+"page": 361,
+"file": "p361_1.webp",
+"w": 547,
+"h": 265,
+"caption": "Fig. 11.2 DHCP working process"
+},
+{
+"page": 363,
+"file": "p363_1.webp",
+"w": 547,
+"h": 222,
+"caption": "Fig. 11.3 DHCP lease renewal"
+},
+{
+"page": 364,
+"file": "p364_1.webp",
+"w": 547,
+"h": 275,
+"caption": "Fig. 11.4 DHCP network topology"
+},
+{
+"page": 367,
+"file": "p367_1.webp",
+"w": 547,
+"h": 340,
+"caption": "Fig. 11.5 The working process of DHCP protocol"
+},
+{
+"page": 368,
+"file": "p368_1.webp",
+"w": 547,
+"h": 186,
+"caption": "Fig. 11.6 Topology for assigning addresses to directly connected network segments using inter- face address pools"
+},
+{
+"page": 369,
+"file": "p369_1.webp",
+"w": 547,
+"h": 257,
+"caption": "Fig. 11.7 DHCP relay illustration"
+},
+{
+"page": 372,
+"file": "p372_1.webp",
+"w": 547,
+"h": 194,
+"caption": "Fig. 11.8 Communication illustration"
+},
+{
+"page": 375,
+"file": "p375_1.webp",
+"w": 547,
+"h": 272,
+"caption": "Fig. 12.1 Wired network and wireless network"
+},
+{
+"page": 379,
+"file": "p379_1.webp",
+"w": 547,
+"h": 272,
+"caption": "Fig. 12.2 Home wireless devices and enterprise wireless devices"
+},
+{
+"page": 380,
+"file": "p380_1.webp",
+"w": 547,
+"h": 299,
+"caption": "Fig. 12.3 WLAN networking architecture"
+},
+{
+"page": 381,
+"file": "p381_1.webp",
+"w": 547,
+"h": 311,
+"caption": "Fig. 12.4 Agile distributed AP architecture"
+},
+{
+"page": 382,
+"file": "p382_1.webp",
+"w": 547,
+"h": 365,
+"caption": "Fig. 12.5 CAPWAP Tunnel"
+},
+{
+"page": 383,
+"file": "p383_1.webp",
+"w": 370,
+"h": 221,
+"caption": ""
+},
+{
+"page": 383,
+"file": "p383_2.webp",
+"w": 547,
+"h": 325,
+"caption": "Fig. 12.7 AC connection method"
+},
+{
+"page": 384,
+"file": "p384_1.webp",
+"w": 547,
+"h": 135,
+"caption": "Fig. 12.8 Wireless communication system"
+},
+{
+"page": 385,
+"file": "p385_1.webp",
+"w": 547,
+"h": 184,
+"caption": "Fig. 12.9 Wireless electromagnetic wave spectrum"
+},
+{
+"page": 386,
+"file": "p386_1.webp",
+"w": 547,
+"h": 253,
+"caption": "Fig. 12.10 Division of the 2.4GHz channel"
+},
+{
+"page": 387,
+"file": "p387_1.webp",
+"w": 370,
+"h": 302,
+"caption": ""
+},
+{
+"page": 388,
+"file": "p388_1.webp",
+"w": 247,
+"h": 332,
+"caption": ""
+},
+{
+"page": 389,
+"file": "p389_1.webp",
+"w": 429,
+"h": 369,
+"caption": "Fig. 12.13 VAP"
+},
+{
+"page": 390,
+"file": "p390_1.webp",
+"w": 549,
+"h": 305,
+"caption": "Fig. 12.14 ESS"
+},
+{
+"page": 391,
+"file": "p391_1.webp",
+"w": 547,
+"h": 375,
+"caption": "Fig. 12.15 Working process of WLAN"
+},
+{
+"page": 392,
+"file": "p392_1.webp",
+"w": 247,
+"h": 187,
+"caption": ""
+},
+{
+"page": 394,
+"file": "p394_1.webp",
+"w": 247,
+"h": 230,
+"caption": ""
+},
+{
+"page": 395,
+"file": "p395_1.webp",
+"w": 247,
+"h": 266,
+"caption": ""
+},
+{
+"page": 396,
+"file": "p396_1.webp",
+"w": 293,
+"h": 321,
+"caption": ""
+},
+{
+"page": 397,
+"file": "p397_1.webp",
+"w": 370,
+"h": 160,
+"caption": ""
+},
+{
+"page": 398,
+"file": "p398_1.webp",
+"w": 370,
+"h": 149,
+"caption": ""
+},
+{
+"page": 400,
+"file": "p400_1.webp",
+"w": 549,
+"h": 265,
+"caption": "Fig. 12.22 Active scanning"
+},
+{
+"page": 402,
+"file": "p402_1.webp",
+"w": 547,
+"h": 365,
+"caption": "Fig. 12.23 Tunnel forwarding and direct forwarding"
+},
+{
+"page": 403,
+"file": "p403_1.webp",
+"w": 547,
+"h": 300,
+"caption": "Fig. 12.24 Network topology"
+},
+{
+"page": 404,
+"file": "p404_1.webp",
+"w": 551,
+"h": 313,
+"caption": ""
+},
+{
+"page": 405,
+"file": "p405_1.webp",
+"w": 551,
+"h": 468,
+"caption": ""
+},
+{
+"page": 406,
+"file": "p406_1.webp",
+"w": 547,
+"h": 493,
+"caption": "Fig. 12.25 Logical topology"
+},
+{
+"page": 419,
+"file": "p419_1.webp",
+"w": 547,
+"h": 135,
+"caption": "Fig. 13.1 Assignment of the ﬁnal IPv4 addresses"
+},
+{
+"page": 421,
+"file": "p421_1.webp",
+"w": 547,
+"h": 183,
+"caption": "Fig. 13.2 IPv4 protocol stack and IPv6 protocol stack"
+},
+{
+"page": 421,
+"file": "p421_2.webp",
+"w": 429,
+"h": 156,
+"caption": "Fig. 13.3 Base and extension headers"
+},
+{
+"page": 422,
+"file": "p422_1.webp",
+"w": 547,
+"h": 367,
+"caption": "Figure 13.4 shows the base header of IPv6. Following the base header is the payload, which includes the transport layer "
+},
+{
+"page": 424,
+"file": "p424_1.webp",
+"w": 374,
+"h": 169,
+"caption": ""
+},
+{
+"page": 425,
+"file": "p425_1.webp",
+"w": 547,
+"h": 380,
+"caption": "Fig. 13.5 IPv6 extension header"
+},
+{
+"page": 425,
+"file": "p425_2.webp",
+"w": 547,
+"h": 201,
+"caption": "Fig. 13.6 IPv6 address composition"
+},
+{
+"page": 426,
+"file": "p426_1.webp",
+"w": 293,
+"h": 180,
+"caption": ""
+},
+{
+"page": 426,
+"file": "p426_2.webp",
+"w": 547,
+"h": 207,
+"caption": "Fig. 13.8 IPv6 address classiﬁcation"
+},
+{
+"page": 429,
+"file": "p429_1.webp",
+"w": 547,
+"h": 149,
+"caption": "Fig. 13.13 EUI-64 speciﬁcation"
+},
+{
+"page": 430,
+"file": "p430_1.webp",
+"w": 370,
+"h": 398,
+"caption": "Fig. 13.15 Composition of Multicast Addresses"
+},
+{
+"page": 430,
+"file": "p430_2.webp",
+"w": 551,
+"h": 202,
+"caption": ""
+},
+{
+"page": 431,
+"file": "p431_1.webp",
+"w": 547,
+"h": 218,
+"caption": "Fig. 13.16 Composition of solicited-node multicast address"
+},
+{
+"page": 432,
+"file": "p432_1.webp",
+"w": 547,
+"h": 200,
+"caption": "Fig. 13.17 Role of anycast addresses"
+},
+{
+"page": 433,
+"file": "p433_1.webp",
+"w": 374,
+"h": 151,
+"caption": ""
+},
+{
+"page": 434,
+"file": "p434_1.webp",
+"w": 547,
+"h": 240,
+"caption": "Fig. 13.18 IPv6 interface addresses and the speciﬁc multicast groups joined"
+},
+{
+"page": 435,
+"file": "p435_1.webp",
+"w": 547,
+"h": 175,
+"caption": "Fig. 13.19 The process of conﬁguring IPv6 addresses on an interface"
+},
+{
+"page": 435,
+"file": "p435_2.webp",
+"w": 475,
+"h": 149,
+"caption": "Fig. 13.20 NDP functions"
+},
+{
+"page": 436,
+"file": "p436_1.webp",
+"w": 374,
+"h": 202,
+"caption": "Table 13.6 Types of mes- sages used for address resolu- tion, preﬁx advertisement and DAD"
+},
+{
+"page": 437,
+"file": "p437_1.webp",
+"w": 547,
+"h": 491,
+"caption": "Fig. 13.21 Static IPv6 address and obtain IPv6 address automatically"
+},
+{
+"page": 438,
+"file": "p438_1.webp",
+"w": 547,
+"h": 183,
+"caption": "Fig. 13.22 IPv6 stateless autoconﬁguration illustration"
+},
+{
+"page": 439,
+"file": "p439_1.webp",
+"w": 547,
+"h": 234,
+"caption": "Fig. 13.23 Stateful autoconﬁguration illustration"
+},
+{
+"page": 441,
+"file": "p441_1.webp",
+"w": 547,
+"h": 263,
+"caption": "Fig. 13.25 IPv6 address generated by stateless auto-conﬁguration"
+},
+{
+"page": 442,
+"file": "p442_1.webp",
+"w": 547,
+"h": 418,
+"caption": "Fig. 13.26 RS packet"
+},
+{
+"page": 443,
+"file": "p443_1.webp",
+"w": 547,
+"h": 550,
+"caption": "Fig. 13.27 Router advertisement (RA) packet"
+},
+{
+"page": 444,
+"file": "p444_1.webp",
+"w": 370,
+"h": 554,
+"caption": ""
+},
+{
+"page": 444,
+"file": "p444_2.webp",
+"w": 547,
+"h": 174,
+"caption": "Fig. 13.29 Network topology with stateful autoconﬁguration"
+},
+{
+"page": 446,
+"file": "p446_1.webp",
+"w": 547,
+"h": 545,
+"caption": "Fig. 13.30 RA packet captured"
+},
+{
+"page": 447,
+"file": "p447_1.webp",
+"w": 547,
+"h": 530,
+"caption": "Fig. 13.31 View the IPv6 conﬁguration obtained from DHCPv6"
+},
+{
+"page": 448,
+"file": "p448_1.webp",
+"w": 547,
+"h": 558,
+"caption": "Fig. 13.32 IPv6 state"
+},
+{
+"page": 448,
+"file": "p448_2.webp",
+"w": 547,
+"h": 130,
+"caption": "Fig. 13.33 Network topology for static routing"
+},
+{
+"page": 450,
+"file": "p450_1.webp",
+"w": 547,
+"h": 129,
+"caption": "Fig. 13.34 Conﬁgure OSPFv3"
+},
+{
+"page": 455,
+"file": "p455_1.webp",
+"w": 547,
+"h": 388,
+"caption": "Fig. 14.1 LAN and WAN illustration"
+},
+{
+"page": 456,
+"file": "p456_1.webp",
+"w": 547,
+"h": 218,
+"caption": "Fig. 14.2 WAN illustration"
+},
+{
+"page": 457,
+"file": "p457_1.webp",
+"w": 547,
+"h": 185,
+"caption": "Fig. 14.3 PPP frame format"
+},
+{
+"page": 460,
+"file": "p460_1.webp",
+"w": 547,
+"h": 301,
+"caption": "Fig. 14.4 LCP message format"
+},
+{
+"page": 461,
+"file": "p461_1.webp",
+"w": 547,
+"h": 335,
+"caption": "Fig. 14.5 LCP negotiation process"
+},
+{
+"page": 462,
+"file": "p462_1.webp",
+"w": 547,
+"h": 259,
+"caption": "Fig. 14.6 PAP authentication"
+},
+{
+"page": 462,
+"file": "p462_2.webp",
+"w": 547,
+"h": 244,
+"caption": "Fig. 14.7 CHAP authentication"
+},
+{
+"page": 463,
+"file": "p463_1.webp",
+"w": 547,
+"h": 247,
+"caption": "Fig. 14.8 Static IP address negotiation"
+},
+{
+"page": 464,
+"file": "p464_1.webp",
+"w": 547,
+"h": 282,
+"caption": "Fig. 14.9 Dynamic IP address negotiation"
+},
+{
+"page": 465,
+"file": "p465_1.webp",
+"w": 547,
+"h": 192,
+"caption": "Fig. 14.10 Conﬁgure PPP: PAP mode for authentication"
+},
+{
+"page": 467,
+"file": "p467_1.webp",
+"w": 547,
+"h": 200,
+"caption": "Fig. 14.11 Conﬁgure PPP: CHAP mode for authentication"
+},
+{
+"page": 468,
+"file": "p468_1.webp",
+"w": 547,
+"h": 244,
+"caption": "Fig. 14.12 Three phases of PPP link establishment"
+},
+{
+"page": 469,
+"file": "p469_1.webp",
+"w": 547,
+"h": 539,
+"caption": "Fig. 14.13 Link establishment phase: AR1 interface parameter negotiation"
+},
+{
+"page": 470,
+"file": "p470_1.webp",
+"w": 547,
+"h": 389,
+"caption": "Fig. 14.14 Link establishment phase: AR2 interface parameter negotiation"
+},
+{
+"page": 470,
+"file": "p470_2.webp",
+"w": 547,
+"h": 300,
+"caption": "Fig. 14.15 Authentication phase: AR1 authenticates AR2"
+},
+{
+"page": 471,
+"file": "p471_1.webp",
+"w": 547,
+"h": 311,
+"caption": "Fig. 14.16 Network protocol phase: send conﬁguration request"
+},
+{
+"page": 471,
+"file": "p471_2.webp",
+"w": 547,
+"h": 305,
+"caption": "Fig. 14.17 Network protocol phase: send conﬁguration acknowledgement"
+},
+{
+"page": 472,
+"file": "p472_1.webp",
+"w": 547,
+"h": 266,
+"caption": "Fig. 14.18 A networking scenario for home users to access the Internet."
+},
+{
+"page": 473,
+"file": "p473_1.webp",
+"w": 547,
+"h": 185,
+"caption": "Fig. 14.19 View the access network from the perspective of PPPoE"
+},
+{
+"page": 474,
+"file": "p474_1.webp",
+"w": 547,
+"h": 209,
+"caption": "Fig. 14.20 PPPoE message format"
+},
+{
+"page": 474,
+"file": "p474_2.webp",
+"w": 429,
+"h": 309,
+"caption": "Fig. 14.21 Discovery phase of PPPoE"
+},
+{
+"page": 475,
+"file": "p475_1.webp",
+"w": 547,
+"h": 223,
+"caption": "Fig. 14.22 PADI message format"
+},
+{
+"page": 476,
+"file": "p476_1.webp",
+"w": 547,
+"h": 229,
+"caption": "Fig. 14.23 Ethernet data frame carrying a PPP frame"
+},
+{
+"page": 476,
+"file": "p476_2.webp",
+"w": 547,
+"h": 230,
+"caption": "Fig. 14.24 PPPoE experimental network topology"
+},
+{
+"page": 478,
+"file": "p478_1.webp",
+"w": 547,
+"h": 233,
+"caption": "Fig. 14.25 Topology for binding a virtual interface template to a physical interface"
+},
+{
+"page": 479,
+"file": "p479_1.webp",
+"w": 547,
+"h": 437,
+"caption": "Fig. 14.26 Enter the PPPoE dial-up user name and password"
+},
+{
+"page": 480,
+"file": "p480_1.webp",
+"w": 547,
+"h": 392,
+"caption": "Fig. 14.27 View the frame format of PPPoE packet"
+},
+{
+"page": 484,
+"file": "p484_1.webp",
+"w": 547,
+"h": 338,
+"caption": "Fig. 15.1 Campus network"
+},
+{
+"page": 485,
+"file": "p485_1.webp",
+"w": 547,
+"h": 340,
+"caption": "Fig. 15.2 Typical campus network architecture"
+},
+{
+"page": 486,
+"file": "p486_1.webp",
+"w": 370,
+"h": 307,
+"caption": ""
+},
+{
+"page": 487,
+"file": "p487_1.webp",
+"w": 547,
+"h": 429,
+"caption": "Fig. 15.4 Medium campus network architecture"
+},
+{
+"page": 487,
+"file": "p487_2.webp",
+"w": 547,
+"h": 399,
+"caption": "Fig. 15.5 Large campus network architecture"
+},
+{
+"page": 488,
+"file": "p488_1.webp",
+"w": 547,
+"h": 342,
+"caption": "Fig. 15.6 Protocols or technologies commonly used in campus networks"
+},
+{
+"page": 491,
+"file": "p491_1.webp",
+"w": 547,
+"h": 339,
+"caption": "Fig. 15.7 Network topology"
+},
+{
+"page": 492,
+"file": "p492_1.webp",
+"w": 551,
+"h": 171,
+"caption": ""
+},
+{
+"page": 493,
+"file": "p493_1.webp",
+"w": 551,
+"h": 445,
+"caption": ""
+},
+{
+"page": 494,
+"file": "p494_1.webp",
+"w": 551,
+"h": 237,
+"caption": ""
+},
+{
+"page": 495,
+"file": "p495_1.webp",
+"w": 547,
+"h": 403,
+"caption": "Fig. 15.8 Interface address and routing conﬁguration"
+},
+{
+"page": 495,
+"file": "p495_2.webp",
+"w": 293,
+"h": 211,
+"caption": ""
+},
+{
+"page": 496,
+"file": "p496_1.webp",
+"w": 370,
+"h": 231,
+"caption": ""
+},
+{
+"page": 497,
+"file": "p497_1.webp",
+"w": 551,
+"h": 477,
+"caption": ""
+},
+{
+"page": 498,
+"file": "p498_1.webp",
+"w": 547,
+"h": 395,
+"caption": "Fig. 15.11 Port-level reliability"
+},
+{
+"page": 498,
+"file": "p498_2.webp",
+"w": 547,
+"h": 405,
+"caption": "Fig. 15.12 Device-level reliability"
+},
+{
+"page": 499,
+"file": "p499_1.webp",
+"w": 547,
+"h": 421,
+"caption": "Fig. 15.13 Loop avoidance"
+},
+{
+"page": 500,
+"file": "p500_1.webp",
+"w": 429,
+"h": 288,
+"caption": "Fig. 15.14 Trafﬁc control"
+},
+{
+"page": 501,
+"file": "p501_1.webp",
+"w": 370,
+"h": 329,
+"caption": ""
+},
+{
+"page": 502,
+"file": "p502_1.webp",
+"w": 370,
+"h": 239,
+"caption": "Fig. 15.17 iMaster NCE platform management."
+},
+{
+"page": 502,
+"file": "p502_2.webp",
+"w": 370,
+"h": 169,
+"caption": ""
+},
+{
+"page": 503,
+"file": "p503_1.webp",
+"w": 551,
+"h": 340,
+"caption": ""
+},
+{
+"page": 504,
+"file": "p504_1.webp",
+"w": 551,
+"h": 344,
+"caption": "Table 15.7 Port types and conﬁguration contents"
+},
+{
+"page": 504,
+"file": "p504_2.webp",
+"w": 551,
+"h": 284,
+"caption": ""
+},
+{
+"page": 505,
+"file": "p505_1.webp",
+"w": 551,
+"h": 303,
+"caption": "Table 15.9 IP address conﬁguration"
+},
+{
+"page": 505,
+"file": "p505_2.webp",
+"w": 374,
+"h": 321,
+"caption": ""
+},
+{
+"page": 506,
+"file": "p506_1.webp",
+"w": 551,
+"h": 275,
+"caption": ""
+},
+{
+"page": 507,
+"file": "p507_1.webp",
+"w": 551,
+"h": 326,
+"caption": "Table 15.12 Network management method"
+},
+{
+"page": 507,
+"file": "p507_2.webp",
+"w": 551,
+"h": 272,
+"caption": "Table 15.13 Network egress conﬁguration"
+},
+{
+"page": 508,
+"file": "p508_1.webp",
+"w": 551,
+"h": 321,
+"caption": ""
+},
+{
+"page": 517,
+"file": "p517_1.webp",
+"w": 547,
+"h": 339,
+"caption": "Fig. 16.2 OID tree structure"
+},
+{
+"page": 517,
+"file": "p517_2.webp",
+"w": 370,
+"h": 181,
+"caption": ""
+},
+{
+"page": 518,
+"file": "p518_1.webp",
+"w": 370,
+"h": 172,
+"caption": ""
+},
+{
+"page": 520,
+"file": "p520_1.webp",
+"w": 370,
+"h": 164,
+"caption": ""
+},
+{
+"page": 524,
+"file": "p524_1.webp",
+"w": 429,
+"h": 294,
+"caption": "Fig. 16.7 NTP protocol clock synchronization process"
+},
+{
+"page": 525,
+"file": "p525_1.webp",
+"w": 547,
+"h": 327,
+"caption": "Fig. 16.8 NTP network structure"
+},
+{
+"page": 527,
+"file": "p527_1.webp",
+"w": 547,
+"h": 234,
+"caption": "Fig. 16.9 NTP unicast server/client mode"
+},
+{
+"page": 533,
+"file": "p533_1.webp",
+"w": 547,
+"h": 199,
+"caption": "Fig. 17.1 Distributed control architecture of traditional network"
+},
+{
+"page": 534,
+"file": "p534_1.webp",
+"w": 370,
+"h": 191,
+"caption": ""
+},
+{
+"page": 535,
+"file": "p535_1.webp",
+"w": 547,
+"h": 347,
+"caption": "Fig. 17.3 Traditional network service deployment"
+},
+{
+"page": 536,
+"file": "p536_1.webp",
+"w": 547,
+"h": 228,
+"caption": "Fig. 17.4 SDN architecture"
+},
+{
+"page": 537,
+"file": "p537_1.webp",
+"w": 547,
+"h": 352,
+"caption": "Fig. 17.5 Flow tables in a network device"
+},
+{
+"page": 539,
+"file": "p539_1.webp",
+"w": 547,
+"h": 165,
+"caption": "Fig. 17.6 Composition of stream ﬂow entries"
+},
+{
+"page": 540,
+"file": "p540_1.webp",
+"w": 370,
+"h": 249,
+"caption": ""
+},
+{
+"page": 543,
+"file": "p543_1.webp",
+"w": 547,
+"h": 348,
+"caption": "Fig. 17.8 Virtualization characteristics"
+},
+{
+"page": 544,
+"file": "p544_1.webp",
+"w": 547,
+"h": 217,
+"caption": "Fig. 17.9 NFV architecture"
+},
+{
+"page": 546,
+"file": "p546_1.webp",
+"w": 547,
+"h": 184,
+"caption": "Fig. 17.10 Huawei NFV solution"
+},
+{
+"page": 549,
+"file": "p549_1.webp",
+"w": 429,
+"h": 263,
+"caption": "Fig. 18.1 Write a Python script to pass the conﬁguration to the device for automated conﬁguration"
+},
+{
+"page": 549,
+"file": "p549_2.webp",
+"w": 370,
+"h": 252,
+"caption": ""
+},
+{
+"page": 550,
+"file": "p550_1.webp",
+"w": 247,
+"h": 223,
+"caption": ""
+},
+{
+"page": 551,
+"file": "p551_1.webp",
+"w": 547,
+"h": 311,
+"caption": "Fig. 18.5 Computing technology stack and program execution process"
+},
+{
+"page": 554,
+"file": "p554_1.webp",
+"w": 547,
+"h": 281,
+"caption": "Fig. 18.7 The interactive programming process"
+},
+{
+"page": 554,
+"file": "p554_2.webp",
+"w": 547,
+"h": 184,
+"caption": "Fig. 18.8 The scripted programming process"
+},
+{
+"page": 555,
+"file": "p555_1.webp",
+"w": 547,
+"h": 145,
+"caption": "Fig. 18.9 Identiﬁer naming speciﬁcation"
+},
+{
+"page": 556,
+"file": "p556_1.webp",
+"w": 547,
+"h": 344,
+"caption": "Fig. 18.10 Code blocks and indentations"
+},
+{
+"page": 557,
+"file": "p557_1.webp",
+"w": 547,
+"h": 372,
+"caption": "Fig. 18.11 Comments"
+},
+{
+"page": 557,
+"file": "p557_2.webp",
+"w": 370,
+"h": 145,
+"caption": ""
+},
+{
+"page": 558,
+"file": "p558_1.webp",
+"w": 547,
+"h": 269,
+"caption": "Fig. 18.13 Functions and modules"
+},
+{
+"page": 558,
+"file": "p558_2.webp",
+"w": 547,
+"h": 207,
+"caption": "Fig. 18.14 Classes and methods"
+},
+{
+"page": 559,
+"file": "p559_1.webp",
+"w": 551,
+"h": 359,
+"caption": ""
+}
+]

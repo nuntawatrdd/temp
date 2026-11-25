@@ -29,6 +29,7 @@ $("#menu").onclick = function () { $("#side").classList.toggle("open"); };
 var app = $("#app"), side = $("#side");
 function secDone(id) { var d = mem.done[id] || {}; return (BYID[id].sections || []).filter(function (_, i) { return d[i]; }).length; }
 function exDone(id) { var d = mem.ex[id] || {}; return Object.keys(d).length; }
+function chLabel(c, i) { return c.uc ? "Use Case " + c.uc : "บทที่ " + (i + 1); }
 function exRight(id) { var d = mem.ex[id] || {}; return Object.keys(d).filter(function (k) { return d[k] === 1; }).length; }
 
 /* ---------- basic 115 questions → choice exercises ---------- */
@@ -130,7 +131,8 @@ function renderSide() {
     '<a href="#exam" class="' + (route.v === "exam" ? "on" : "") + '">📝 ข้อสอบรวม</a><h4>บทเรียน</h4>';
   CH.forEach(function (c, i) {
     var on = route.v === "ch" && route.id === c.id;
-    h += '<a href="#' + c.id + '" class="' + (on ? "on" : "") + '" style="--cc:' + COLOR[c.id] + '"><span class="num">' + (i + 1) + "</span><span>" + esc(c.title) + "</span></a>";
+    if (c.uc && !(CH[i - 1] || {}).uc) h += "<h4>Use Case</h4>";
+    h += '<a href="#' + c.id + '" class="' + (on ? "on" : "") + '" style="--cc:' + COLOR[c.id] + '"><span class="num">' + (c.uc || i + 1) + "</span><span>" + esc(c.title) + "</span></a>";
     if (on) {
       h += '<div class="sub">';
       (c.sections || []).forEach(function (s, k) {
@@ -177,7 +179,8 @@ function home() {
     '<a class="card" href="#exam" style="--cc:var(--color-bad)"><span class="tag">จำลองสอบ</span><h3>📝 ข้อสอบรวม</h3><p>สุ่มโจทย์ประยุกต์ + ข้อพื้นฐานทุกบท ไม่บอกที่มาของข้อ</p></a></div><div class="cards">';
   CH.forEach(function (c, i) {
     var n = (c.ex || []).length, d = exDone(c.id);
-    h += '<a class="card" href="#' + c.id + '" style="--cc:' + COLOR[c.id] + '"><span class="tag">บทที่ ' + (i + 1) + "</span><h3>" + esc(c.title) + "</h3><p>" + esc(c.th || "") + '</p><div class="bar" style="--c:' + COLOR[c.id] + '"><i style="width:' + (n ? d / n * 100 : 0) + '%"></i></div><div class="meta"><span>' + (c.sections || []).length + " หัวข้อ</span><span>" + n + " แบบฝึก</span><span>ทำแล้ว " + d + "</span></div></a>";
+    if (c.uc && !(CH[i - 1] || {}).uc) h += '</div><h2 style="margin:32px 0 0">Use Case</h2><div class="cards">';
+    h += '<a class="card" href="#' + c.id + '" style="--cc:' + COLOR[c.id] + '"><span class="tag">' + chLabel(c, i) + "</span><h3>" + esc(c.title) + "</h3><p>" + esc(c.th || "") + '</p><div class="bar" style="--c:' + COLOR[c.id] + '"><i style="width:' + (n ? d / n * 100 : 0) + '%"></i></div><div class="meta"><span>' + (c.sections || []).length + " หัวข้อ</span><span>" + n + " แบบฝึก</span><span>ทำแล้ว " + d + "</span></div></a>";
   });
   app.innerHTML = h + "</div>";
 }
@@ -190,7 +193,7 @@ function mustOf(c) {
 }
 function chapter(r) {
   var c = BYID[r.id], i = CH.indexOf(c); document.title = c.title + " — " + SITE.name;
-  var h = '<div class="chhead"><div class="crumb"><a href="#home">หน้าหลัก</a> › บทที่ ' + (i + 1) + "</div><h1>" + esc(c.title) + '</h1><div class="th">' + esc(c.th || "") + "</div>" +
+  var h = '<div class="chhead"><div class="crumb"><a href="#home">หน้าหลัก</a> › ' + chLabel(c, i) + "</div><h1>" + esc(c.title) + '</h1><div class="th">' + esc(c.th || "") + "</div>" +
     '<div class="tabs"><a class="tab ' + (r.tab === "content" ? "on" : "") + '" href="#' + c.id + '">📖 เนื้อหาทั้งหมด</a><a class="tab ' + (r.tab === "sum" ? "on" : "") + '" href="#' + c.id + '/sum">📌 สรุป</a><a class="tab ' + (r.tab === "ex" ? "on" : "") + '" href="#' + c.id + '/ex">✍️ แบบฝึก<small>' + (c.ex || []).length + "</small></a></div></div>";
   app.innerHTML = h; var box = el("div"); app.append(box);
   if (r.tab === "content") {

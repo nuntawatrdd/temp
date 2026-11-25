@@ -5,4 +5,3 @@
 @import url("../study.css");
 :root { --c: var(--ch-teal); }
 
-.sec h2 .ref{font:500 12px var(--mono);color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:middle}

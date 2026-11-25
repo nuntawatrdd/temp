@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireless Study Guide: Wi-Fi และ WLAN อ่านจบใน 1 ชั่วโมง</title>
+<meta name="description" content="สรุป Wireless ครบจากคลื่นวิทยุถึง WLAN ระดับองค์กร และ Wi-Fi 6/7 พร้อมรูปประกอบและแบบฝึก">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <button id="menu" class="icon" aria-label="หัวข้อ">☰</button>
+  <a class="brand" href="#home"><span class="logo" aria-hidden="true">WL</span><span><b>Wireless</b><small>Wi-Fi, WLAN, AP, AC, CAPWAP, Wi-Fi 6</small></span></a>
+  <div class="search">
+    <input id="q" type="search" placeholder="ค้นหาเนื้อหา… เช่น CAPWAP, MCS, OFDMA" autocomplete="off" aria-label="ค้นหา">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <a class="icon" href="../index.html" title="หน้าหลัก Study Hub" aria-label="หน้าหลัก Study Hub">⌂</a>
+  <button id="theme" class="icon" title="สลับโหมดสว่าง/มืด" aria-label="สลับธีม">◐</button>
+</header>
+<div class="shell">
+  <nav id="side" class="side" aria-label="หัวข้อ"></nav>
+  <main id="app"></main>
+</div>
+<footer class="foot">เรียบเรียงจากตำรา Huawei ICT (บท WLAN) และสไลด์วิชา IoT (Wi-Fi). แบบฝึกเป็นโจทย์ประยุกต์ที่เพิ่มขึ้นเพื่อฝึกวิเคราะห์</footer>
+<script>
+window.SITE = { key: "wl", name: "Wireless Study Guide", h1: "Wireless ทั้งเรื่อง อ่านรอบเดียวจบ แล้วฝึกคิดแบบข้อสอบ", p: "ตั้งแต่คลื่นวิทยุ มาตรฐาน 802.11 ไปจนถึงสถาปัตยกรรม AC + AP, CAPWAP, การส่งข้อมูล และ Wi-Fi 6/7 พร้อมรูปประกอบ ใช้เวลาอ่านราว 1 ชั่วโมง", order: [["wl", "var(--ch-mint)"]] };
+window.IOT = { ch: {}, reg: function (o) { this.ch[o.id] = o; } };
+</script>
+<script src="ch/wl.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

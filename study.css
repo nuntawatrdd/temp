@@ -359,3 +359,11 @@ pre { border-radius: var(--radius-m); }
 .opt .l, .qgrid .cur { border-radius: var(--radius-s); }
 details.dt > summary { border-radius: var(--radius-card); }
 @media (prefers-reduced-motion: no-preference) { .card, .btn, .tab, .opt, .icon { transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out); } }
+
+/* figures cut from the textbook */
+.sb figure { margin: var(--space-md) 0; padding: var(--space-sm); background: var(--color-sheet); border: var(--rule-hair) solid var(--color-rule); max-width: 760px; }
+.sb figure img { width: 100%; height: auto; display: block; }
+.sb figcaption { margin-top: var(--space-xs); font-size: var(--text-fine); color: var(--color-code-bg); }
+
+/* source-slide reference tag in a section heading */
+.sec h2 .ref { font: 500 var(--text-xs) var(--font-mono); color: inherit; border: var(--rule-hair) solid var(--color-rule-2); padding: var(--space-3xs) var(--space-xs); margin-left: var(--space-xs); vertical-align: middle; }

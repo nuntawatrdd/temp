@@ -1,0 +1,6 @@
+# local scratch
+.hallmark/
+
+# too large for GitHub (kept on disk)
+mis/usecase/7.1.pdf
+mis/usecase/8.3.pdf
